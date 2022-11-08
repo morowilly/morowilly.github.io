@@ -1,0 +1,7587 @@
+@juego de caracteres "UTF-8";
+@importar url("src/bootstrap/bootstrap.min.css");
+@importar url("src/splide/splide.min.css");
+@importar URL("https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css");
+@importar URL("https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap");
+cuerpo {
+  familia de fuentes: "Poppins", sans-serif;
+  tamaño de fuente: 15px;
+  altura de línea: 1,6 rem;
+  espaciado entre letras: 0,004em;
+  color: #958d9e;
+  fondo: #EDEDF5;
+  ancho: 100%;
+  altura: 100%;
+  desbordamiento-x: oculto;
+  -webkit-font-smoothing: suavizado;
+  -moz-osx-font-smoothing: escala de grises;
+}
+
+a {
+  color: #6236FF;
+  esquema: 0 !importante;
+  texto-decoración: ninguno;
+}
+
+a: pasar el mouse, a: activo, a: enfocar {
+  esquema: 0 !importante;
+  color: #6236FF;
+  texto-decoración: ninguno;
+}
+
+::-webkit-barra de desplazamiento {
+  ancho: 0;
+}
+
+.appHeader {
+  altura: 56px;
+  pantalla: flexible;
+  justificar-contenido: centro;
+  alinear elementos: centro;
+  posición: fija;
+  arriba: env(área-segura-recuadro-superior);
+  izquierda: 0;
+  derecha: 0;
+  índice z: 999;
+  fondo: #FFFFFF;
+  color: #27173E;
+  borde inferior: 1px sólido #DCDCE9;
+}
+
+.appHeader:antes de {
+  contenido: '';
+  altura: env(área-segura-recuadro-superior);
+  posición: fija;
+  superior: 0;
+  izquierda: 0;
+  derecha: 0;
+  ancho: 100%;
+  índice z: 99999;
+  fondo: #FFF;
+}
+
+.appHeader.sin borde {
+  borde: 0;
+  sombra de caja: ninguna;
+}
+
+.appHeader.transparent {
+  fondo: transparente;
+}
+
+.appHeader.transparent:antes {
+  fondo: #EDEDF5;
+}
+
+.appHeader .izquierda,
+.appHeader .derecha {
+  altura: 56px;
+  pantalla: flexible;
+  alinear elementos: centro;
+  posición: absoluta;
+}
+
+.appHeader .izquierda .icono,
+.appHeader .icono de iones izquierdo,
+.appHeader .derecho .icono,
+.appHeader .icono de iones derecho {
+  tamaño de fuente: 26px;
+}
+
+.appHeader .left .headerButton,
+.appHeader .derecho .headerButton {
+  ancho mínimo: 36px;
+  altura: 56px;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  relleno: 10px;
+  color: #6236FF;
+  posición: relativa;
+}
+
+.appHeader .left .headerButton .btn,
+.appHeader .right .headerButton .btn {
+  tamaño de fuente: 16px;
+  altura: 32px;
+  relleno: 0px 14px;
+}
+
+.appHeader .izquierda .headerButton:activo,
+.appHeader .right .headerButton:activo {
+  opacidad: .6;
+}
+
+.appHeader .izquierda {
+  izquierda: 10px;
+  superior: 0;
+}
+
+.appHeader .derecha {
+  derecha: 10px;
+  superior: 0;
+}
+
+.appHeader .pageTitle {
+  tamaño de fuente: 17px;
+  peso de fuente: 500;
+  relleno: 0 10px;
+}
+
+.appHeader .pageTitle .logo {
+  altura máxima: 24px;
+}
+
+.appHeader.texto-luz {
+  color: #FFF;
+}
+
+.appHeader.texto-luz .headerButton {
+  color: #FFF;
+}
+
+.appHeader.bg-primary, .appHeader.bg-secundario, .appHeader.bg-success, .appHeader.bg-warning, .appHeader.bg-danger, .appHeader.bg-info, .appHeader.bg-light, . appHeader.bg-oscuro {
+  borde: 0;
+}
+
+.appHeader.bg-primary:antes {
+  fondo: #6236FF !importante;
+}
+
+.appHeader.bg-secundario:antes de {
+  fondo: #8494A8 !importante;
+}
+
+.appHeader.bg-success:before {
+  fondo: #1DCC70 !importante;
+}
+
+.appHeader.bg-advertencia:antes de {
+  fondo: #FFB400 !importante;
+}
+
+.appHeader.bg-peligro:antes {
+  fondo: #FF396F !importante;
+}
+
+.appHeader.bg-info: antes {
+  fondo: #05D0A4 !importante;
+}
+
+.appHeader.bg-dark:antes de {
+  fondo: #222 !importante;
+}
+
+.encabezado extra {
+  posición: fija;
+  izquierda: 0;
+  arriba: 50px;
+  altura: 50px;
+  derecha: 0;
+  ancho: 100%;
+  relleno: 5px 16px;
+  pantalla: flexible;
+  margen-superior: env(área-segura-recuadro-superior);
+  alinear elementos: centro;
+  fondo: #FFF;
+  índice z: 1000;
+  borde inferior: 1px sólido #DCDCE9;
+}
+
+.testPreview .appHeader {
+  posición: relativa;
+  superior: 0;
+  índice z: 0;
+}
+
+.appBottomMenu {
+  altura mínima: 56px;
+  posición: fija;
+  índice z: 999;
+  ancho: 100%;
+  inferior: 0;
+  izquierda: 0;
+  derecha: 0;
+  fondo: #FFFFFF;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  borde superior: 1px sólido #DCDCE9;
+  relleno-izquierda: 4px;
+  relleno derecho: 4px;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.appBottomMenu.sin borde {
+  borde: 0 !importante;
+  box-shadow: 0 !importante;
+}
+
+.appBottomMenu .elemento {
+  tamaño de fuente: 9px;
+  espaciado entre letras: 0;
+  alineación de texto: centro;
+  ancho: 100%;
+  altura: 56px;
+  altura de línea: 1,2 em;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  posición: relativa;
+}
+
+.appBottomMenu .item:antes {
+  contenido: '';
+  bloqueo de pantalla;
+  altura: 2px;
+  borde-radio: 0 0 10px 10px;
+  fondo: transparente;
+  posición: absoluta;
+  izquierda: 4px;
+  derecha: 4px;
+  superior: 0;
+}
+
+.appBottomMenu .item .col {
+  ancho: 100%;
+  relleno: 0 4px;
+  alineación de texto: centro;
+}
+
+.appBottomMenu .item .icon,
+.appBottomMenu .item ion-icon {
+  pantalla: en línea-flexible;
+  margen: 1px automático 3px automático;
+  tamaño de fuente: 24px;
+  altura de línea: 1em;
+  color: #27173E;
+  bloqueo de pantalla;
+  margen superior: 1px;
+  margen inferior: 3px;
+}
+
+.appBottomMenu .item .action-button {
+  pantalla: en línea-flexible;
+  ancho: 50px;
+  altura: 50px;
+  margen izquierdo: -5px;
+  margen derecho: -5px;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  borde-radio: 200px;
+  fondo: #6236FF;
+}
+
+.appBottomMenu .item .action-button.large {
+  ancho: 60px;
+  altura: 60px;
+  margen superior: -20px;
+  margen izquierdo: -10px;
+  margen derecho: -10px;
+}
+
+.appBottomMenu .item .action-button .icon,
+.appBottomMenu .item .action-button ion-icon {
+  color: #FFF !importante;
+  margen: 0 !importante;
+  altura de línea: 0 !importante;
+}
+
+.appBottomMenu .item fuerte {
+  margen superior: 4px;
+  bloqueo de pantalla;
+  color: #27173E;
+  peso de fuente: 400;
+}
+
+.appBottomMenu .item:activo {
+  opacidad: .8;
+}
+
+.appBottomMenu .item.active:antes de {
+  fondo: #6236FF;
+}
+
+.appBottomMenu .item.active .icon,
+.appBottomMenu .item.icono de iones activos,
+.appBottomMenu .item.activo fuerte {
+  color: #6236FF !importante;
+  peso de fuente: 500;
+}
+
+.appBottomMenu .item: hover .icon,
+.appBottomMenu .item:icono de iones flotante,
+.appBottomMenu .item:flotar fuerte {
+  color: #27173E;
+}
+
+.appBottomMenu.texto-luz {
+  color: #FFF;
+}
+
+.appBottomMenu.text-light .item {
+  color: #FFF;
+  opacidad: .7;
+}
+
+.appBottomMenu.text-light .item .icon,
+.appBottomMenu.text-light .item ion-icon,
+.appBottomMenu.text-light .item fuerte {
+  color: #FFF;
+}
+
+.appBottomMenu.text-light .item.active {
+  opacidad: 1;
+}
+
+.appBottomMenu.text-light .item.active .icon,
+.appBottomMenu.text-light .item.active ion-icon,
+.appBottomMenu.text-light .item.active fuerte {
+  color: #FFF !importante;
+}
+
+.appBottomMenu.bg-primary, .appBottomMenu.bg-secundario, .appBottomMenu.bg-success, .appBottomMenu.bg-warning, .appBottomMenu.bg-danger, .appBottomMenu.bg-info, .appBottomMenu.bg-light, . appBottomMenu.bg-dark {
+  borde: 0;
+}
+
+.appBottomMenu.bg-primary .item:antes, .appBottomMenu.bg-secundario .item:antes, .appBottomMenu.bg-success .item:antes, .appBottomMenu.bg-warning .item:antes, .appBottomMenu.bg-danger .item:antes, .appBottomMenu.bg-info .item:antes, .appBottomMenu.bg-light .item:antes, .appBottomMenu.bg-dark .item:antes {
+  pantalla: ninguno;
+}
+
+#appCapsule {
+  relleno: 56px 0;
+  margen-inferior: env(área-segura-recuadro-inferior);
+  margen-superior: env(área-segura-recuadro-superior);
+}
+
+#appCapsule.extra-header-active {
+  acolchado superior: 106px;
+}
+
+#appCapsule.full-height {
+  min-altura: 100vh;
+}
+
+.sección {
+  relleno: 0 16px;
+}
+
+.sección.completa {
+  relleno: 0;
+}
+
+.content-hero {
+  fondo: #FFF;
+  borde inferior: 1px sólido #DCDCE9;
+  relleno: 16px;
+}
+
+.héroe de contenido .título {
+  peso de fuente: 700;
+  espaciado entre letras: -0.03em;
+  tamaño de fuente: 17px;
+  margen: 0;
+}
+
+.bloque ancho {
+  fondo: #fff;
+  borde superior: 1px sólido #DCDCE9;
+  borde inferior: 1px sólido #DCDCE9;
+  relleno-izquierda: 16px;
+  relleno derecho: 16px;
+}
+
+.sección de título {
+  tamaño de fuente: 15px;
+  relleno: 6px 0;
+  color: #27173E;
+  peso de fuente: 500;
+}
+
+.section-title.large {
+  tamaño de fuente: 20px;
+  altura de línea: 1,2 em;
+  peso de fuente: 700;
+}
+
+.sección-título.medio {
+  tamaño de fuente: 17px;
+  peso de fuente: 700;
+}
+
+.content-header,
+.content-pie de página {
+  tamaño de fuente: 11px;
+  color: #A9ABAD;
+  relleno-izquierda: 0;
+  relleno derecho: 0;
+  altura de línea: 1,4 em;
+}
+
+.section.full .section-title {
+  relleno-izquierda: 16px;
+  relleno derecho: 16px;
+}
+
+.section.full .content-header,
+.section.full .content-footer {
+  relleno-izquierda: 16px;
+  relleno derecho: 16px;
+}
+
+.section.full .wide-block .content-header,
+.section.full .wide-block .content-footer {
+  relleno-izquierda: 0;
+  relleno derecho: 0;
+}
+
+.section.inset .wide-block {
+  borde: 0;
+  borde-radio: 10px;
+  sombra de caja: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+}
+
+.profileBox {
+  relleno: 0 16px;
+  pantalla: flexible;
+  alinear elementos: centro;
+}
+
+.profileBox .image-wrapper {
+  margen derecho: 16px;
+}
+
+.profileBox .en {
+  altura de línea: 1,4 em;
+  relleno derecho: 25px;
+}
+
+.profileBox .en fuerte {
+  bloqueo de pantalla;
+  peso de fuente: 500;
+  color: #27173E;
+}
+
+.profileBox .in .text-muted {
+  tamaño de fuente: 14px;
+  color: #A9ABAD !importante;
+}
+
+.sidebar-equilibrio {
+  relleno: 6px 16px;
+  fondo: #6236FF;
+}
+
+.sidebar-equilibrio .listview-título {
+  relleno derecho: 0;
+  relleno-izquierda: 0;
+  color: #FFF;
+  opacidad: .6;
+}
+
+.sidebar-saldo .cantidad {
+  peso de fuente: 700;
+  espaciado entre letras: -0.01em;
+  altura de línea: 1em;
+  peso de fuente: 32px;
+  color: #FFF;
+  margen inferior: 6px;
+}
+
+.acción-grupo {
+  pantalla: flexible;
+  alinear elementos: inicio flexible;
+  justificar-contenido: espacio-entre;
+  relleno: 0px 16px 10px 16px;
+  fondo: #6236FF;
+}
+
+.acción-grupo .acción-botón {
+  relleno: 10px 2px;
+  pantalla: en línea-flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  alineación de texto: centro;
+  tamaño de fuente: 11px;
+  altura de línea: 1em;
+  color: rgba (255, 255, 255, 0,7);
+}
+
+.action-group .action-button .iconbox {
+  fondo: rgba(0, 0, 0, 0.3);
+  ancho: 38px;
+  altura: 38px;
+  margen: 0 automático 8px automático;
+  borde-radio: 100%;
+  tamaño de fuente: 18px;
+  color: #FFF;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+}
+
+.action-group .action-button:último hijo {
+  borde derecho: 0;
+}
+
+#sidebarPanel .modal-diálogo {
+  posición: fija;
+  izquierda: 0;
+  superior: 0;
+  inferior: 0;
+}
+
+#sidebarPanel .modal-cuerpo {
+  margen inferior: 34px;
+  padding-bottom: env(safe-area-inset-bottom) !important;
+  ancho: 300px;
+}
+
+.panelbox-left .listview > li,
+.panelbox-right .listview > li {
+  relleno: 10px 16px;
+}
+
+.panelbox-left .link-listview > li,
+.panelbox-right .link-listview > li {
+  relleno: 0;
+}
+
+.panelbox-left .link-listview > li a,
+.panelbox-right .link-listview > li a {
+  relleno: 10px 36px 10px 16px;
+}
+
+.panelbox-left .image-listview > li,
+.panelbox-right .image-listview > li {
+  relleno: 0;
+}
+
+.panelbox-left .image-listview > li .item,
+.panelbox-right .image-listview > li .item {
+  relleno: 10px 16px;
+}
+
+.panelbox-left .image-listview > li a.item,
+.panelbox-right .image-listview > li a.item {
+  relleno derecho: 36px;
+}
+
+.sidebar-cerrar {
+  posición: absoluta;
+  derecha: 10px;
+}
+
+.appFooter {
+  borde superior: 1px sólido #DCDCE9;
+  relleno: 16px;
+  tamaño de fuente: 12px;
+  alineación de texto: centro;
+  altura de línea: 1,2 em;
+  fondo: #FFF;
+}
+
+.appFooter .footer-title {
+  peso de fuente: 500;
+  color: #27173E;
+  margen inferior: 8px;
+}
+
+.exampleBox {
+  ancho: 100%;
+  altura: 40px;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  borde: 1px sólido #bdbdd5;
+  fondo: rgba(220, 220, 233, 0.3);
+  tamaño de fuente: 10px;
+}
+
+.iconEjemplo {
+  color: #27173E;
+}
+
+.redondeado {
+  borde-radio: 10px !importante;
+}
+
+.fila {
+  margen izquierdo: -8px;
+  margen derecho: -8px;
+}
+
+.columna,
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-xl-1,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12 {
+  relleno-izquierda: 8px;
+  relleno derecho: 8px;
+}
+
+.m-0 {
+  margen: 0 !importante;
+}
+
+.m-05 {
+  margen: 5px !importante;
+}
+
+.m-1 {
+  margen: 8px !importante;
+}
+
+.m-2 {
+  margen: 16px !importante;
+}
+
+.m-3 {
+  margen: 24px !importante;
+}
+
+.m-4 {
+  margen: 32px !importante;
+}
+
+.m-5 {
+  margen: 40px !importante;
+}
+
+.mt-0 {
+  margen superior: 0 !importante;
+}
+
+.mt-05 {
+  margen superior: 5px !importante;
+}
+
+.mt-1 {
+  margen superior: 8px !importante;
+}
+
+.mt-2 {
+  margen superior: 16px !importante;
+}
+
+.mt-3 {
+  margen superior: 24px !importante;
+}
+
+.mt-4 {
+  margen superior: 32px !importante;
+}
+
+.mt-5 {
+  margen superior: 40px !importante;
+}
+
+.mb-0 {
+  margen inferior: 0px !importante;
+}
+
+.mb-05 {
+  margen inferior: 5px !importante;
+}
+
+.mb-1 {
+  margen inferior: 8px !importante;
+}
+
+.mb-2 {
+  margen inferior: 16px !importante;
+}
+
+.mb-3 {
+  margen inferior: 24px !importante;
+}
+
+.mb-4 {
+  margen inferior: 32px! importante;
+}
+
+.mb-5 {
+  margen inferior: 40px !importante;
+}
+
+.ms-0 {
+  margen izquierdo: 0 !importante;
+}
+
+.ms-05 {
+  margen izquierdo: 5px !importante;
+}
+
+.ms-1 {
+  margen izquierdo: 8px !importante;
+}
+
+.ms-2 {
+  margen izquierdo: 16px !importante;
+}
+
+.ms-3 {
+  margen izquierdo: 24px !importante;
+}
+
+.ms-4 {
+  margen izquierdo: 32px !importante;
+}
+
+.ms-5 {
+  margen izquierdo: 40px !importante;
+}
+
+.me-0 {
+  margen derecho: 0px !importante;
+}
+
+.me-05 {
+  margen derecho: 5px !importante;
+}
+
+.me-1 {
+  margen derecho: 8px !importante;
+}
+
+.me-2 {
+  margen derecho: 16px !importante;
+}
+
+.me-3 {
+  margen derecho: 24px !importante;
+}
+
+.me-4 {
+  margen derecho: 32px !importante;
+}
+
+.me-5 {
+  margen derecho: 40px !importante;
+}
+
+.p-0 {
+  relleno: 0 !importante;
+}
+
+.p-05 {
+  relleno: 5px !importante;
+}
+
+.p-1 {
+  relleno: 8px !importante;
+}
+
+.p-2 {
+  relleno: 16px !importante;
+}
+
+.p-3 {
+  relleno: 24px !importante;
+}
+
+.p-4 {
+  relleno: 32px !importante;
+}
+
+.p-5 {
+  relleno: 40px !importante;
+}
+
+.pt-0 {
+  padding-top: 0px !importante;
+}
+
+.pt-05 {
+  relleno superior: 5px !importante;
+}
+
+.pt-1 {
+  acolchado superior: 8px !importante;
+}
+
+.pt-2 {
+  acolchado superior: 16px !importante;
+}
+
+.pt-3 {
+  acolchado superior: 24px !importante;
+}
+
+.pt-4 {
+  acolchado superior: 32px !importante;
+}
+
+.pt-5 {
+  acolchado superior: 40px !importante;
+}
+
+.pb-0 {
+  relleno inferior: 0px !importante;
+}
+
+.pb-05 {
+  relleno inferior: 5px !importante;
+}
+
+.pb-1 {
+  relleno inferior: 8px !importante;
+}
+
+.pb-2 {
+  relleno inferior: 16px !importante;
+}
+
+.pb-3 {
+  relleno inferior: 24px !importante;
+}
+
+.pb-4 {
+  relleno inferior: 32px !importante;
+}
+
+.pb-5 {
+  relleno inferior: 40px !importante;
+}
+
+.ps-0 {
+  relleno-izquierda: 0px !importante;
+}
+
+.ps-05 {
+  relleno-izquierda: 5px !importante;
+}
+
+.ps-1 {
+  relleno-izquierda: 8px !importante;
+}
+
+.ps-2 {
+  relleno-izquierda: 16px !importante;
+}
+
+.ps-3 {
+  relleno-izquierda: 24px !importante;
+}
+
+.ps-4 {
+  relleno-izquierda: 32px !importante;
+}
+
+.ps-5 {
+  relleno-izquierda: 40px !importante;
+}
+
+.pe-0 {
+  relleno derecho: 0px !importante;
+}
+
+.pe-05 {
+  relleno derecho: 5px! importante;
+}
+
+.pe-1 {
+  relleno derecho: 8px! importante;
+}
+
+.pe-2 {
+  relleno derecho: 16px! importante;
+}
+
+.pe-3 {
+  relleno derecho: 24px! importante;
+}
+
+.pe-4 {
+  relleno derecho: 32px! importante;
+}
+
+.pe-5 {
+  relleno derecho: 40px! importante;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #27173E;
+  margen: 0 0 10px 0;
+}
+
+h1 pequeño,
+h2 pequeño,
+h3 pequeño,
+h4 pequeño,
+h5 pequeño,
+h6 pequeño {
+  color: rgba (39, 23, 62, 0,6);
+}
+
+insignia h1,
+insignia h2,
+insignia h3,
+insignia h4,
+insignia h5,
+h6 .insignia {
+  altura de línea: 1em;
+}
+
+.texto silenciado {
+  tamaño de fuente: 13px;
+  color: #958d9e !importante;
+}
+
+h1 {
+  tamaño de fuente: 32px;
+  peso de fuente: 700;
+}
+
+h2 {
+  tamaño de fuente: 20px;
+  peso de fuente: 700;
+}
+
+h3 {
+  tamaño de fuente: 17px;
+  peso de fuente: 700;
+}
+
+h4 {
+  tamaño de fuente: 15px;
+  peso de fuente: 500;
+}
+
+h5 {
+  tamaño de fuente: 13px;
+  peso de fuente: 500;
+}
+
+h6 {
+  tamaño de fuente: 11px;
+  peso de fuente: 500;
+}
+
+.Plomo {
+  peso de fuente: 400;
+  tamaño de fuente: 17px;
+  color: #958d9e;
+}
+
+Marcos {
+  borde-radio: 10px;
+}
+
+.texto-grande {
+  tamaño de fuente: 32px;
+}
+
+fuerte,
+b {
+  peso de fuente: 500;
+}
+
+cita en bloque.cita en bloque {
+  relleno: 16px;
+  fondo: rgba(220, 220, 233, 0.5);
+  borde-radio: 10px;
+  tamaño de fuente: 17px;
+  color: #27173E;
+}
+
+blockquote.blockquote .blockquote-pie de página {
+  color: #958d9e;
+  margen superior: 10px;
+}
+
+.fontsize-normal {
+  tamaño de fuente: 15px !importante;
+}
+
+.tamaño de fuente-sub {
+  tamaño de fuente: 13px !importante;
+}
+
+.fontsize-caption {
+  tamaño de fuente: 11px !importante;
+}
+
+.fontsize-heading {
+  tamaño de fuente: 17px !importante;
+}
+
+.fontsize-headingLarge {
+  tamaño de fuente: 20px !importante;
+}
+
+.fontsize-headingXLarge {
+  tamaño de fuente: 32px !importante;
+}
+
+.imagen {
+  altura: automático;
+  borde-radio: 10px;
+}
+
+.imagen.w16 {
+  ancho: 16px !importante;
+}
+
+.imagen.w24 {
+  ancho: 24px !importante;
+}
+
+.imagen.w32 {
+  ancho: 32px !importante;
+}
+
+.imagen.w36 {
+  ancho: 36px !importante;
+}
+
+.imagen.w48 {
+  ancho: 48px !importante;
+}
+
+.imagen.w64 {
+  ancho: 64px !importante;
+}
+
+.imagen.w76 {
+  ancho: 76px !importante;
+}
+
+.imagen.w86 {
+  ancho: 86px !importante;
+}
+
+.imagen.w100 {
+  ancho: 100px !importante;
+}
+
+.imagen.w120 {
+  ancho: 120px !importante;
+}
+
+.imagen.w140 {
+  ancho: 140px !importante;
+}
+
+.imagen.w160 {
+  ancho: 160px !importante;
+}
+
+.imagen.w180 {
+  ancho: 180px !importante;
+}
+
+.imagen.w200 {
+  ancho: 200px !importante;
+}
+
+.imaged.img-fluido {
+  ancho: 100%;
+}
+
+.imagen.redondeada {
+  border-radius: 100% !importante;
+}
+
+.imaged.radius {
+  borde-radio: 10px !importante;
+}
+
+.imagen.cuadrado {
+  border-radius: 0 !importante;
+}
+
+#cargador {
+  posición: fija;
+  izquierda: 0;
+  superior: 0;
+  derecha: 0;
+  inferior: 0;
+  índice z: 99999;
+  fondo: #6236FF;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  selección de usuario: ninguno;
+}
+
+#loader .icono-de-carga {
+  ancho: 42px;
+  altura: automático;
+  animación: loadingAnimation 0.5s facilidad de entrada y salida infinita;
+}
+
+#cargador.oculto {
+  pantalla: ninguno;
+}
+
+@keyframes cargandoAnimación {
+  0% {
+    transformar: rotar (0 grados);
+  }
+  100% {
+    transformar: rotar (180 grados);
+  }
+}
+
+cuerpo.animaciónGoBack {
+  desbordamiento: oculto;
+}
+
+cuerpo.animaciónGoBack .appHeader,
+cuerpo.animaciónGoBack .appBottomMenu,
+cuerpo.animaciónGoBack .extraHeader,
+cuerpo.animaciónGoBack #appCapsule {
+  transformar: traducir (100%, 0);
+  transición: todo .24s lineal;
+}
+
+cuerpo.animaciónGoBack:después de {
+  contenido: "";
+  bloqueo de pantalla;
+  posición: fija;
+  izquierda: 0;
+  superior: 0;
+  inferior: 0;
+  ancho: 100%;
+  color de fondo: #6236FF;
+  imagen de fondo: url("../img/loading-icon.png");
+  repetición de fondo: sin repetición;
+  tamaño de fondo: 42px automático;
+  posición de fondo: centro centro;
+  índice z: 9999;
+  animación: animationGoBack .24s lineal;
+}
+
+@keyframes animaciónGoBack {
+  0% {
+    izquierda: -100%;
+  }
+  100% {
+    izquierda: 0;
+  }
+}
+
+.Insignia {
+  tamaño de fuente: 12px;
+  altura de línea: 1em;
+  borde-radio: 100px;
+  espaciado entre letras: 0;
+  altura: 22px;
+  ancho mínimo: 22px;
+  ancho: automático;
+  relleno: 0 6px;
+  pantalla: en línea-flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  peso de fuente: 400;
+}
+
+.badge-primary,
+a.badge-primary {
+  fondo: #6236FF !importante;
+}
+
+.badge-secundario,
+a.badge-secundario {
+  fondo: #8494A8 !importante;
+}
+
+.insignia-éxito,
+a.badge-éxito {
+  fondo: #1DCC70 !importante;
+}
+
+.placa-peligro,
+a.badge-peligro {
+  fondo: #FF396F !importante;
+}
+
+.advertencia de insignia,
+a.badge-advertencia {
+  fondo: #FFB400 !importante;
+  color: #FFF;
+}
+
+.información de la insignia,
+a.información de la insignia {
+  fondo: #05D0A4 !importante;
+}
+
+.insignia-luz,
+a.badge-light {
+  fondo: rgba(255, 255, 255, 0.6) !importante;
+  color: #27173E;
+}
+
+.insignia-oscuro,
+a.badge-oscuro {
+  fondo: #222 !importante;
+}
+
+.badge-empty {
+  pantalla: inline-flex! importante;
+  ancho mínimo: 8px !importante;
+  ancho: 8px !importante;
+  altura: 8px !importante;
+  relleno: 0 !importante;
+  tamaño de fuente: 0px;
+}
+
+.appHeader .insignia {
+  ancho mínimo: 16px;
+  altura: 16px;
+  altura de línea: 9px !importante;
+  tamaño de fuente: 10px;
+  relleno: 0 4px !importante;
+  posición: absoluta;
+  derecha: 2px;
+  arriba: 10px;
+}
+
+.appHeader .badge-empty {
+  arriba: 14px;
+}
+
+.appBottomMenu .insignia {
+  ancho mínimo: 16px;
+  altura: 16px;
+  altura de línea: 1em !importante;
+  tamaño de fuente: 10px;
+  relleno: 0 4px !importante;
+  posición: absoluta;
+  derecha: 50%;
+  transformar: traducirX(120%);
+  arriba: 6px;
+}
+
+.appBottomMenu .badge-empty {
+  transformar: traducirX(200%);
+  arriba: -1px;
+}
+
+.listview-título {
+  color: #958d9e;
+  relleno: 7px 16px;
+  tamaño de fuente: 13px;
+  peso de fuente: 500;
+}
+
+.vista de la lista {
+  bloqueo de pantalla;
+  relleno: 0;
+  margen: 0;
+  color: #27173E;
+  fondo: #fff;
+  borde superior: 1px sólido #DCDCE9;
+  borde inferior: 1px sólido #DCDCE9;
+  altura de línea: 1,3 em;
+}
+
+.listview .text-muted {
+  tamaño de fuente: 13px;
+  color: #A9ABAD !importante;
+}
+
+.listview .texto-pequeño {
+  tamaño de fuente: 13px;
+  color: #958d9e;
+}
+
+.listview .text-xsmall {
+  tamaño de fuente: 11px;
+  color: #A9ABAD;
+}
+
+.vista de lista > li {
+  relleno: 11px 16px;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+  posición: relativa;
+  altura mínima: 50px;
+}
+
+.listview > li:después {
+  contenido: "";
+  bloqueo de pantalla;
+  posición: absoluta;
+  izquierda: 0;
+  derecha: 0;
+  inferior: 0;
+  altura: 1px;
+  fondo: #DCDCE9;
+}
+
+.listview > li:último-hijo:después {
+  pantalla: ninguno;
+}
+
+.listview > li pie de página,
+.listview > li encabezado {
+  tamaño de fuente: 12px;
+  margen: 0;
+  altura de línea: 1,2 em;
+}
+
+.listview > li pie de página {
+  color: #958d9e;
+  margen superior: 3px;
+}
+
+.listview > li encabezado {
+  margen inferior: 3px;
+}
+
+.listview > li.divisor-título {
+  fondo: rgba(220, 220, 233, 0.5);
+  margen superior: -1px;
+  borde superior: 1px sólido #DCDCE9;
+  borde inferior: 1px sólido #DCDCE9;
+  relleno: 12px 16px;
+  tamaño de fuente: 13px;
+  min-altura: auto;
+  color: #958d9e;
+}
+
+.listview > li.divider-title:después de {
+  pantalla: ninguno;
+}
+
+.listview.flush {
+  borde superior: 0;
+  borde inferior: 0;
+}
+
+.listview.transparente {
+  fondo: transparente;
+}
+
+.link-listview > li {
+  relleno: 0;
+  min-altura: auto;
+}
+
+.link-listview > li a {
+  relleno: 11px 36px 11px 16px;
+  altura mínima: 50px;
+  pantalla: flexible;
+  ancho: 100%;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+  color: #27173E !importante;
+}
+
+.link-listview > li a:después de {
+  contenido: "\f3d1";
+  familia de fuentes: "Ionicons";
+  tamaño de fuente: 18px;
+  posición: absoluta;
+  derecha: 16px;
+  altura: 18px;
+  arriba: 50%;
+  margen superior: -9px;
+  altura de línea: 1em;
+  color: #A9ABAD;
+  opacidad: 0,6;
+}
+
+.link-listview > li a:activo {
+  fondo: rgba(220, 220, 233, 0.3);
+}
+
+.link-listview > li.active a {
+  fondo: rgba(220, 220, 233, 0.3) !importante;
+}
+
+.image-listview > li {
+  relleno: 0;
+  min-altura: auto;
+}
+
+.image-listview > li:después {
+  izquierda: 68px;
+}
+
+.image-listview > li .item {
+  relleno: 11px 16px;
+  ancho: 100%;
+  altura mínima: 50px;
+  pantalla: flexible;
+  alinear elementos: centro;
+}
+
+.image-listview > li .item .image {
+  ancho: 36px;
+  altura: 36px;
+  borde-radio: 400px;
+  margen derecho: 16px;
+}
+
+.image-listview > li .item .icon-box {
+  ancho mínimo: 36px;
+  ancho máximo: 36px;
+  ancho: 36px;
+  altura: 36px;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  altura de línea: 1em;
+  tamaño de fuente: 22px;
+  borde-radio: 400px;
+  margen derecho: 16px;
+}
+
+.image-listview > li .item .icon-box.transparent {
+  tamaño de fuente: 28px;
+  color: #6236FF;
+}
+
+.image-listview > li .item .in {
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+  ancho: 100%;
+}
+
+.image-listview > li a.item {
+  color: #27173E !importante;
+  relleno derecho: 36px;
+}
+
+.image-listview > li a.item:activo {
+  fondo: rgba(220, 220, 233, 0.3);
+}
+
+.image-listview > li a.item:después {
+  contenido: "\f3d1";
+  familia de fuentes: "Ionicons";
+  tamaño de fuente: 18px;
+  posición: absoluta;
+  derecha: 16px;
+  color: #A9ABAD;
+  opacidad: 0,6;
+  altura de línea: 1em;
+  altura: 18px;
+  arriba: 50%;
+  margen superior: -9px;
+}
+
+.image-listview > li.active .item {
+  fondo: rgba(220, 220, 233, 0.3) !importante;
+}
+
+.image-listview.text > li:después {
+  izquierda: 16px;
+}
+
+.image-listview.media > li {
+  borde inferior: 1px sólido #DCDCE9;
+}
+
+.image-listview.media > li:último hijo {
+  borde inferior: 0;
+}
+
+.image-listview.media > li .imageWrapper {
+  margen derecho: 16px;
+}
+
+.image-listview.media > li:después {
+  pantalla: ninguno;
+}
+
+.listview.sin línea > li:después,
+.listview.no-line .item :después de {
+  pantalla: ninguno;
+}
+
+.listview.sin espacio > li .item {
+  relleno: 0;
+}
+
+.listview.sin espacio > li {
+  relleno-izquierda: 0;
+  relleno derecho: 0;
+}
+
+.listview.recuadro {
+  margen izquierdo: 16px;
+  margen derecho: 16px;
+  desbordamiento: oculto;
+  borde: 0;
+  borde-radio: 10px;
+  sombra de caja: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+}
+
+.tarjeta {
+  fondo: #ffffff;
+  borde-radio: 10px;
+  borde: 0;
+  sombra de caja: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+  margen superior: 8px;
+}
+
+.tarjeta .cuerpo-de-tarjeta {
+  relleno: 16px;
+}
+
+.tarjeta .tarjeta-título {
+  color: #27173E;
+  tamaño de fuente: 17px;
+  peso de fuente: 500;
+}
+
+.tarjeta .tarjeta-subtítulo {
+  color: #27173E;
+  peso de fuente: 400;
+  tamaño de fuente: 13px;
+}
+
+.card .listview > li:primer hijo .item {
+  borde-radio: 10px 10px 0 0;
+}
+
+.card .listview > li:último hijo .item {
+  borde-radio: 0 0 10px 10px;
+}
+
+.tarjeta .tarjeta-encabezado {
+  fondo: transparente;
+  color: #27173E;
+  peso de fuente: 500;
+  tamaño de fuente: 17px;
+  relleno: 12px 16px;
+  borde inferior: 1px sólido #DCDCE9;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+}
+
+.tarjeta .tarjeta-encabezado .botón {
+  tamaño de fuente: 24px;
+  color: #A9ABAD;
+}
+
+.tarjeta .tarjeta-pie de página {
+  fondo: transparente;
+  borde superior: 1px sólido #DCDCE9;
+  color: #958d9e;
+  relleno: 12px 16px;
+}
+
+.tarjeta .tarjeta-img-top {
+  borde-radio: 10px 10px 0 0;
+}
+
+.tarjeta .overlay-img {
+  borde-radio: 10px;
+}
+
+.tarjeta .tarjeta-img-superposición {
+  fondo: rgba(0, 0, 0, 0.5);
+  borde-radio: 10px;
+}
+
+.tarjeta .tarjeta-img-superposición .tarjeta-título {
+  color: #fff;
+}
+
+.tarjeta .tarjeta-img-superposición .tarjeta-texto {
+  color: rgba (255, 255, 255, 0,7);
+}
+
+.card.bg-primary, .card.bg-secundaria, .card.bg-danger, .card.bg-success, .card.bg-warning, .card.bg-info, .card.bg-dark {
+  borde: 0;
+}
+
+.card.bg-primary .card-title, .card.bg-secondary .card-title, .card.bg-danger .card-title, .card.bg-success .card-title, .card.bg-warning .card-title, .card.bg-info .card-title, .card.bg-dark .card-title {
+  color: #fff;
+}
+
+.card.bg-primary .card-text, .card.bg-secondary .card-text, .card.bg-danger .card-text, .card.bg-success .card-text, .card.bg-warning .tarjeta-texto, .tarjeta.bg-info .tarjeta-texto, .tarjeta.bg-dark .tarjeta-texto {
+  color: rgba (255, 255, 255, 0,7);
+}
+
+.card.bg-primary .card-header, .card.bg-secondary .card-header, .card.bg-danger .card-header, .card.bg-success .card-header, .card.bg-warning .card-header, .card.bg-info .card-header, .card.bg-dark .card-header {
+  color: #fff;
+  borde inferior: 1px sólido rgba (255, 255, 255, 0.15);
+}
+
+.tarjeta.bg-luz {
+  fondo: #fff;
+}
+
+.btn {
+  altura: 36px;
+  relleno: 3px 18px;
+  tamaño de fuente: 13px;
+  altura de línea: 1,2 em;
+  peso de fuente: 500;
+  box-shadow: ninguno !importante;
+  pantalla: en línea-flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  transición: 0.2s todo;
+  decoración de texto: ¡ninguna! importante;
+  borde-radio: 10px;
+  ancho del borde: 2px;
+}
+
+.btn i.icono,
+.btn icono de iones {
+  tamaño de fuente: 22px;
+  margen derecho: 7px;
+  margen superior: -2px;
+}
+
+.btn.redondeado {
+  borde-radio: 100px !importante;
+}
+
+.btn.cuadrado {
+  border-radius: 0 !importante;
+}
+
+.btn.sombreado {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2) ! importante;
+}
+
+.btn-lg {
+  altura: 52px;
+  relleno: 3px 24px;
+  tamaño de fuente: 15px;
+}
+
+.btn-lg i.icon,
+.btn-lg icono de iones {
+  tamaño de fuente: 26px;
+}
+
+.btn-sm {
+  altura: 28px;
+  relleno: 0px 6px;
+  tamaño de fuente: 12px;
+}
+
+.btn-sm i.icon,
+.btn-sm icono de iones {
+  tamaño de fuente: 20px;
+  margen derecho: 4px;
+}
+
+.btn-bloque {
+  ancho: 100%;
+}
+
+.btn-grupo .btn:activo {
+  transformar: ninguno;
+}
+
+.btn-icono {
+  ancho: 36px;
+  altura: 36px;
+  relleno: 0;
+}
+
+.btn-icono i.icono,
+.btn-icono icono de ion {
+  alineación de texto: centro;
+  margen: 0 !importante;
+}
+
+.btn-facebook {
+  color: #fff !importante;
+  fondo: #39579b;
+}
+
+.btn-twitter {
+  color: #fff !importante;
+  fondo: #049ff6;
+}
+
+.btn-instagram {
+  color: #fff !importante;
+  fondo: #df237b;
+}
+
+.btn-linkedin {
+  color: #fff !importante;
+  fondo: #0075aa;
+}
+
+.btn-contracción {
+  color: #fff !importante;
+  fondo: #923cff;
+}
+
+.btn-whatsapp {
+  color: #fff !importante;
+  fondo: #0ad561;
+}
+
+.btn-primario {
+  fondo: #6236FF !importante;
+  border-color: #6236FF !importante;
+  color: #FFFFFF !importante;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+  fondo: #4e1dff !importante;
+  border-color: #4e1dff !importante;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  fondo: #6236FF;
+  color del borde: #6236FF;
+  opacidad: 0,5;
+}
+
+.btn-secundario {
+  fondo: #8494A8 !importante;
+  border-color: #8494A8 !importante;
+  color: #FFFFFF !importante;
+}
+
+.btn-secundario: pasar el mouse, .btn-secundario:enfoque, .btn-secundario:activo, .btn-secundario.activo {
+  fondo: #75879d !importante;
+  color del borde: #75879d !importante;
+}
+
+.btn-secundario.deshabilitado, .btn-secundario:deshabilitado {
+  fondo: #8494A8;
+  color del borde: #8494A8;
+  opacidad: 0,5;
+}
+
+.btn-éxito {
+  fondo: #1DCC70 !importante;
+  border-color: #1DCC70 !importante;
+  color: #FFFFFF !importante;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active {
+  fondo: #1ab664 !importante;
+  border-color: #1ab664 !importante;
+}
+
+.btn-éxito.deshabilitado, .btn-éxito:deshabilitado {
+  fondo: #1DCC70;
+  color del borde: #1DCC70;
+  opacidad: 0,5;
+}
+
+.btn-peligro {
+  fondo: #FF396F !importante;
+  color del borde: #FF396F !importante;
+  color: #FFFFFF !importante;
+}
+
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active {
+  fondo: #ff205c !importante;
+  border-color: #ff205c !importante;
+}
+
+.btn-peligro.deshabilitado, .btn-peligro:deshabilitado {
+  fondo: #FF396F;
+  color del borde: #FF396F;
+  opacidad: 0,5;
+}
+
+.btn-advertencia {
+  color: #fff !importante;
+  fondo: #FFB400 !importante;
+  color del borde: #FFB400 !importante;
+  color: #FFFFFF !importante;
+}
+
+.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active {
+  fondo: #e6a200 !importante;
+  border-color: #e6a200 !importante;
+}
+
+.btn-advertencia.deshabilitado, .btn-advertencia:deshabilitado {
+  fondo: #FFB400;
+  color del borde: #FFB400;
+  opacidad: 0,5;
+}
+
+.btn-enlace {
+  color: #6236FF !importante;
+}
+
+.btn-info {
+  fondo: #05D0A4 !importante;
+  border-color: #05D0A4 !importante;
+  color: #FFFFFF !importante;
+}
+
+.btn-info: hover, .btn-info: enfoque, .btn-info: active, .btn-info.active {
+  fondo: #04b790 !importante;
+  border-color: #04b790 !importante;
+}
+
+.btn-info.deshabilitado, .btn-info:deshabilitado {
+  fondo: #05D0A4;
+  color del borde: #05D0A4;
+  opacidad: 0,5;
+}
+
+.btn-oscuro {
+  fondo: #333 !importante;
+  border-color: #333 !importante;
+  color: #FFFFFF !importante;
+}
+
+.btn-dark:hover, .btn-dark:focus, .btn-dark:active, .btn-dark.active {
+  fondo: #262626 !importante;
+  border-color: #262626 !importante;
+}
+
+.btn-oscuro.deshabilitado, .btn-oscuro:deshabilitado {
+  fondo: #333;
+  color del borde: #333;
+  opacidad: 0,5;
+}
+
+.btn-luz {
+  fondo: rgba(255, 255, 255, 0.5) !importante;
+  border-color: rgba(255, 255, 255, 0.5) !importante;
+  color: #FFFFFF !importante;
+  color: #27173E !importante;
+}
+
+.btn-light:hover, .btn-light:focus, .btn-light:active, .btn-light.active {
+  fondo: rgba(242, 242, 242, 0.5) !importante;
+  border-color: rgba(242, 242, 242, 0.5) !importante;
+}
+
+.btn-light.disabled, .btn-light:disabled {
+  fondo: rgba(255, 255, 255, 0.5);
+  color de borde: rgba(255, 255, 255, 0.5);
+  opacidad: 0,5;
+}
+
+.btn-esquema-primario {
+  fondo: transparente;
+  color del borde: #6236FF;
+  color: #6236FF;
+  transición: 0.2s todo;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:activo {
+  fondo: rgba(98, 54, 255, 0.15) !importante;
+  border-color: #6236FF !importante;
+  color: #6236FF !importante;
+}
+
+.btn-esquema-primario.activo {
+  fondo: #6236FF !importante;
+  color: #FFF !importante;
+  border-color: #6236FF !importante;
+}
+
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+  color: #6236FF !importante;
+  border-color: #6236FF !importante;
+  fondo: transparente !importante;
+  opacidad: 0,5;
+}
+
+.btn-esquema-secundario {
+  fondo: transparente;
+  color del borde: #8494A8;
+  color: #8494A8;
+  transición: 0.2s todo;
+}
+
+.btn-outline-secundario: hover, .btn-outline-secundario: activo {
+  fondo: rgba(132, 148, 168, 0.15) !importante;
+  border-color: #8494A8 !importante;
+  color: #8494A8 !importante;
+}
+
+.btn-outline-secundario.activo {
+  fondo: #8494A8 !importante;
+  color: #FFF !importante;
+  border-color: #8494A8 !importante;
+}
+
+.btn-contorno-secundario.deshabilitado, .btn-contorno-secundario:deshabilitado {
+  color: #8494A8 !importante;
+  border-color: #8494A8 !importante;
+  fondo: transparente !importante;
+  opacidad: 0,5;
+}
+
+.btn-esquema-éxito {
+  fondo: transparente;
+  color del borde: #1DCC70;
+  color: #1DCC70;
+  transición: 0.2s todo;
+}
+
+.btn-outline-success:hover, .btn-outline-success:activo {
+  fondo: rgba(29, 204, 112, 0.15) !importante;
+  border-color: #1DCC70 !importante;
+  color: #1DCC70 !importante;
+}
+
+.btn-outline-success.active {
+  fondo: #1DCC70 !importante;
+  color: #FFF !importante;
+  border-color: #1DCC70 !importante;
+}
+
+.btn-outline-success.disabled, .btn-outline-success:disabled {
+  color: #1DCC70 !importante;
+  border-color: #1DCC70 !importante;
+  fondo: transparente !importante;
+  opacidad: 0,5;
+}
+
+.btn-contorno-peligro {
+  fondo: transparente;
+  color del borde: #FF396F;
+  color: #FF396F;
+  transición: 0.2s todo;
+}
+
+.btn-outline-danger:hover, .btn-outline-danger:activo {
+  fondo: rgba(255, 57, 111, 0.15) !importante;
+  color del borde: #FF396F !importante;
+  color: #FF396F !importante;
+}
+
+.btn-outline-danger.active {
+  fondo: #FF396F !importante;
+  color: #FFF !importante;
+  color del borde: #FF396F !importante;
+}
+
+.btn-outline-danger.disabled, .btn-outline-danger:disabled {
+  color: #FF396F !importante;
+  color del borde: #FF396F !importante;
+  fondo: transparente !importante;
+  opacidad: 0,5;
+}
+
+.btn-contorno-advertencia {
+  fondo: transparente;
+  color del borde: #FFB400;
+  color: #FFB400;
+  transición: 0.2s todo;
+}
+
+.btn-outline-warning: hover, .btn-outline-warning: activo {
+  fondo: rgba(255, 180, 0, 0.15) !importante;
+  color del borde: #FFB400 !importante;
+  color: #FFB400 !importante;
+}
+
+.btn-contorno-advertencia.activo {
+  fondo: #FFB400 !importante;
+  color: #FFF !importante;
+  color del borde: #FFB400 !importante;
+}
+
+.btn-outline-warning.disabled, .btn-outline-warning:disabled {
+  color: #FFB400 !importante;
+  color del borde: #FFB400 !importante;
+  fondo: transparente !importante;
+  opacidad: 0,5;
+}
+
+.btn-esquema-info {
+  fondo: transparente;
+  color del borde: #05D0A4;
+  color: #05D0A4;
+  transición: 0.2s todo;
+}
+
+.btn-outline-info: hover, .btn-outline-info: activo {
+  fondo: rgba(5, 208, 164, 0.15) !importante;
+  border-color: #05D0A4 !importante;
+  color: #05D0A4 !importante;
+}
+
+.btn-esquema-info.activo {
+  fondo: #05D0A4 !importante;
+  color: #FFF !importante;
+  border-color: #05D0A4 !importante;
+}
+
+.btn-outline-info.disabled, .btn-outline-info:disabled {
+  color: #05D0A4 !importante;
+  border-color: #05D0A4 !importante;
+  fondo: transparente !importante;
+  opacidad: 0,5;
+}
+
+.btn-contorno-luz {
+  fondo: transparente;
+  color del borde: #fff;
+  color: #fff;
+  transición: 0.2s todo;
+}
+
+.btn-outline-light: hover, .btn-outline-light: activo {
+  fondo: rgba(255, 255, 255, 0.15) !importante;
+  border-color: #fff !importante;
+  color: #fff !importante;
+}
+
+.btn-outline-light.activo {
+  fondo: #fff !importante;
+  color: #FFF !importante;
+  border-color: #fff !importante;
+}
+
+.btn-outline-light.disabled, .btn-outline-light:disabled {
+  color: #fff !importante;
+  border-color: #fff !importante;
+  fondo: transparente !importante;
+  opacidad: 0,5;
+}
+
+.btn-outline-light:activo {
+  color: #27173E !importante;
+}
+
+.btn-text-primary {
+  fondo: transparente;
+  borde-color: transparente;
+  color: #6236FF !importante;
+  transición: 0.2s todo;
+}
+
+.btn-text-primary: hover {
+  fondo: transparente;
+}
+
+.btn-text-primary:activo, .btn-text-primary.active {
+  fondo: rgba(98, 54, 255, 0.15) !importante;
+  border-color: transparente !importante;
+  color: #6236FF !importante;
+}
+
+.btn-text-primary.disabled, .btn-text-primary:disabled {
+  color: #6236FF !importante;
+  border-color: #6236FF !importante;
+  fondo: transparente !importante;
+  opacidad: 0,5;
+}
+
+.btn-texto-secundario {
+  fondo: transparente;
+  borde-color: transparente;
+  color: #8494A8 !importante;
+  transición: 0.2s todo;
+}
+
+.btn-texto-secundario: pasar el cursor {
+  fondo: transparente;
+}
+
+.btn-texto-secundario:activo, .btn-texto-secundario.activo {
+  fondo: rgba(132, 148, 168, 0.15) !importante;
+  border-color: transparente !importante;
+  color: #8494A8 !importante;
+}
+
+.btn-texto-secundario.deshabilitado, .btn-texto-secundario:deshabilitado {
+  color: #8494A8 !importante;
+  border-color: #8494A8 !importante;
+  fondo: transparente !importante;
+  opacidad: 0,5;
+}
+
+.btn-texto-éxito {
+  fondo: transparente;
+  borde-color: transparente;
+  color: #1DCC70 !importante;
+  transición: 0.2s todo;
+}
+
+.btn-text-success: hover {
+  fondo: transparente;
+}
+
+.btn-texto-éxito:activo, .btn-texto-éxito.activo {
+  fondo: rgba(29, 204, 112, 0.15) !importante;
+  border-color: transparente !importante;
+  color: #1DCC70 !importante;
+}
+
+.btn-text-success.disabled, .btn-text-success:disabled {
+  color: #1DCC70 !importante;
+  border-color: #1DCC70 !importante;
+  fondo: transparente !importante;
+  opacidad: 0,5;
+}
+
+.btn-texto-peligro {
+  fondo: transparente;
+  borde-color: transparente;
+  color: #FF396F !importante;
+  transición: 0.2s todo;
+}
+
+.btn-texto-peligro: pasar el cursor {
+  fondo: transparente;
+}
+
+.btn-texto-peligro:activo, .btn-texto-peligro.activo {
+  fondo: rgba(255, 57, 111, 0.15) !importante;
+  border-color: transparente !importante;
+  color: #FF396F !importante;
+}
+
+.btn-text-danger.disabled, .btn-text-danger:disabled {
+  color: #FF396F !importante;
+  color del borde: #FF396F !importante;
+  fondo: transparente !importante;
+  opacidad: 0,5;
+}
+
+.btn-texto-advertencia {
+  fondo: transparente;
+  borde-color: transparente;
+  color: #FFB400 !importante;
+  transición: 0.2s todo;
+}
+
+.btn-text-warning: hover {
+  fondo: transparente;
+}
+
+.btn-text-warning:activo, .btn-text-warning.activo {
+  fondo: rgba(255, 180, 0, 0.15) !importante;
+  border-color: transparente !importante;
+  color: #FFB400 !importante;
+}
+
+.btn-text-warning.disabled, .btn-text-warning:disabled {
+  color: #FFB400 !importante;
+  color del borde: #FFB400 !importante;
+  fondo: transparente !importante;
+  opacidad: 0,5;
+}
+
+.btn-text-info {
+  fondo: transparente;
+  borde-color: transparente;
+  color: #05D0A4 !importante;
+  transición: 0.2s todo;
+}
+
+.btn-text-info: hover {
+  fondo: transparente;
+}
+
+.btn-texto-info:activo, .btn-texto-info.activo {
+  fondo: rgba(5, 208, 164, 0.15) !importante;
+  border-color: transparente !importante;
+  color: #05D0A4 !importante;
+}
+
+.btn-text-info.disabled, .btn-text-info:disabled {
+  color: #05D0A4 !importante;
+  border-color: #05D0A4 !importante;
+  fondo: transparente !importante;
+  opacidad: 0,5;
+}
+
+.btn-texto-luz {
+  fondo: transparente;
+  color: #FFF;
+}
+
+.btn-text-light:hover, .btn-text-light:active, .btn-text-light.active {
+  color: #FFF;
+  fondo: rgba(255, 255, 255, 0.1);
+}
+
+.btn-texto-oscuro {
+  fondo: transparente;
+  borde-color: transparente;
+  color: #27173E !importante;
+  transición: 0.2s todo;
+}
+
+.btn-text-dark: hover {
+  fondo: transparente;
+}
+
+.btn-texto-oscuro:activo, .btn-texto-oscuro.activo {
+  fondo: rgba(39, 23, 62, 0.15) !importante;
+  border-color: transparente !importante;
+  color: #27173E !importante;
+}
+
+.btn-text-dark.disabled, .btn-text-dark:disabled {
+  color: #27173E !importante;
+  border-color: #27173E !importante;
+  fondo: transparente !importante;
+  opacidad: 0,5;
+}
+
+.btn-grupo .btn {
+  margen izquierdo: -2px !importante;
+}
+
+.btn-check:checked + .btn-outline-primary,
+.btn-check:checked + .btn-outline-secundario,
+.btn-check:checked + .btn-outline-danger,
+.btn-check:checked + .btn-outline-warning,
+.btn-check:checked + .btn-outline-success,
+.btn-check:marcado + .btn-outline-info,
+.btn-check:checked + .btn-outline-dark {
+  color: #fff !importante;
+  transición: 0.1s todo;
+}
+
+.btn-check:checked + .btn-outline-primary {
+  fondo: #6236FF !importante;
+  border-color: #6236FF !importante;
+}
+
+.btn-check:checked + .btn-outline-secundario {
+  fondo: #8494A8 !importante;
+  border-color: #8494A8 !importante;
+}
+
+.btn-check:marcado + .btn-outline-warning {
+  fondo: #FFB400 !importante;
+  color del borde: #FFB400 !importante;
+}
+
+.btn-check:checked + .btn-outline-danger {
+  fondo: #FF396F !importante;
+  color del borde: #FF396F !importante;
+}
+
+.btn-check:checked + .btn-outline-success {
+  fondo: #1DCC70 !importante;
+  border-color: #1DCC70 !importante;
+}
+
+.btn-check:marcado + .btn-outline-info {
+  fondo: #05D0A4 !importante;
+  border-color: #05D0A4 !importante;
+}
+
+.btn-check:checked + .btn-outline-dark {
+  fondo: #222 !importante;
+  border-color: #222 !importante;
+}
+
+.acordeón {
+  borde superior: 1px sólido #DCDCE9;
+  borde inferior: 1px sólido #DCDCE9;
+  fondo: #fff;
+  desbordamiento: oculto;
+}
+
+.acordeón.acordeón-flush {
+  fondo: transparente;
+}
+
+.acordeón .acordeón-colapso {
+  borde: 0;
+}
+
+.acordeón .elemento-de-acordeón {
+  borde: 0;
+}
+
+.acordeón .cuerpo-acordeón {
+  relleno: 8px 16px 20px 16px;
+}
+
+.acordeón .acordeón-contenido {
+  relleno: 0;
+}
+
+.acordeón .acordeón-encabezado {
+  posición: relativa;
+}
+
+.accordion .accordion-header .btn,
+.acordeón .acordeón-cabecera .acordeón-botón {
+  box-shadow: ninguno !importante;
+  justificar-contenido: flex-start !importante;
+  border-radius: 0 !importante;
+  ancho: 100%;
+  alineación de texto: izquierda! importante;
+  peso de fuente: 400;
+  fondo: transparente !importante;
+  tamaño de fuente: 15px;
+  relleno: 8px 50px 8px 16px;
+  borde: 0 !importante;
+  altura mínima: 50px;
+  color: #27173E;
+}
+
+.accordion .accordion-header .btn:activo,
+.accordion .accordion-header .accordion-button:activo {
+  fondo: rgba(220, 220, 233, 0.3) !importante;
+}
+
+.accordion .accordion-header .btn:después,
+.accordion .accordion-header .accordion-button:después {
+  fondo: url("data:image/svg+xml,%0A%3Csvg width='10px' height='16px' viewBox='0 0 10 16' version='1.1' xmlns='http://www.w3 .org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Página-1' trazo='ninguno' ancho de trazo='1' relleno ='ninguna' regla de relleno='evenodd' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg id='Listview' transform='translate(-112.000000, -120.000000)' stroke='% 23A9ABAD' ancho de trazo='2.178'%3E%3Cpolilínea id='Ruta' puntos='114 122 120 128 114 134'%3E%3C/polilínea%3E%3C/g%3E%3C/g%3E%3C /svg%3E") centro sin repetición centro !importante;
+  contenido: "";
+  ancho: 20px;
+  altura: 20px;
+  peso de fuente: 700;
+  posición: absoluta;
+  derecha: 10px;
+  color: #A9ABAD;
+  altura de línea: 1em;
+  transición: 0s todo;
+  altura: 18px;
+  arriba: 50%;
+  opacidad: 0,5;
+  margen superior: -9px;
+  transformar: rotar (-90 grados);
+}
+
+.accordion .accordion-header .btn:antes,
+.accordion .accordion-header .accordion-button:before {
+  contenido: "";
+  bloqueo de pantalla;
+  altura: 1px;
+  fondo: transparente;
+  posición: absoluta;
+  izquierda: 16px;
+  abajo: 1px;
+  derecha: 0;
+}
+
+.accordion .accordion-header .btn.collapsed:después,
+.accordion .accordion-header .accordion-button.collapsed:después de {
+  transformar: rotar (90 grados);
+}
+
+.accordion .accordion-header .btn.collapsed:antes,
+.accordion .accordion-header .accordion-button.collapsed:before {
+  fondo: #DCDCE9;
+}
+
+.accordion .accordion-header .btn i.bi,
+.accordion .accordion-header .btn i.icon,
+.accordion .accordion-header .btn icono de iones,
+.accordion .accordion-header .accordion-button i.bi,
+.accordion .accordion-header .accordion-button i.icon,
+.accordion .accordion-header .accordion-button ion-icon {
+  ancho: 24px;
+  tamaño de fuente: 24px;
+  margen derecho: 10px;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  color: #6236FF;
+}
+
+.acordeón header.bg-warning .accordion-button, .accordion .accordion-header.bg-danger .accordion-button, .accordion .accordion-header.bg-warning .accordion-button, .accordion .accordion-header.bg-info .botón-acordeón, .acordeón .encabezado-acordeón.bg-dark .botón-acordeón {
+  color: #FFF;
+}
+
+.accordion .accordion-header.bg-primary .accordion-button:antes, .accordion .accordion-header.bg-secundario .accordion-button:antes, .accordion .accordion-header.bg-success .accordion-button:antes , .accordion .accordion-header.bg-warning .accordion-button:before, .accordion .accordion-header.bg-danger .accordion-button:before, .accordion .accordion-header.bg-warning .accordion-button: antes, .accordion .accordion-header.bg-info .accordion-button:antes, .accordion .accordion-header.bg-dark .accordion-button:antes {
+  pantalla: ninguno;
+}
+
+acordeón , .accordion .accordion-header.bg-warning .accordion-button:after, .accordion .accordion-header.bg-danger .accordion-button:after, .accordion .accordion-header.bg-warning .accordion-button: después, .accordion .accordion-header.bg-info .accordion-button:después, .accordion .accordion-header.bg-dark .accordion-button:después {
+  fondo: url("data:image/svg+xml,%0A%3Csvg width='10px' height='16px' viewBox='0 0 10 16' version='1.1' xmlns='http://www.w3 .org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Página-1' trazo='ninguno' ancho de trazo='1' relleno ='ninguna' regla de relleno='evenodd' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg id='Listview' transform='translate(-112.000000, -120.000000)' stroke='% 23FFF' ancho de trazo='2.178'%3E%3Cpolilínea id='Ruta' puntos='114 122 120 128 114 134'%3E%3C/polilínea%3E%3C/g%3E%3C/g%3E%3C /svg%3E") centro sin repetición centro !importante;
+}
+
+.accordion .accordion-item:primer-hijo {
+  borde-radio: 10px 10px 0 0;
+}
+
+.accordion .accordion-item:último-hijo {
+  borde-radio: 0 0 10px 10px;
+}
+
+.accordion .accordion-item:último hijo .accordion-header .accordion-button:antes {
+  pantalla: ninguno;
+}
+
+.recuadro .acordeón {
+  borde-radio: 10px;
+  borde: 1px sólido #DCDCE9;
+}
+
+.modal.action-sheet {
+  índice z: 200000;
+}
+
+.modal.action-sheet .modal-dialog {
+  relleno: 0;
+  margen: 0;
+  inferior: 0;
+  posición: fija;
+  ancho: 100%;
+  ancho mínimo: 100%;
+  índice z: 12000;
+  transformar: traducir (0, 100%);
+}
+
+.modal.action-sheet.show .modal-dialog {
+  transformar: traducir (0, 0);
+}
+
+.modal.action-sheet .close-button {
+  ancho: 40px;
+  altura: 40px;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  tamaño de fuente: 24px;
+  posición: absoluta;
+  derecha: 10px;
+  arriba: 3px;
+  color: #A9ABAD;
+}
+
+.modal.action-sheet .close-button:hover, .modal.action-sheet .close-button:activo {
+  color: #958d9e;
+}
+
+.modal.action-sheet .modal-content {
+  sombra de caja: ninguna;
+  borde: 0;
+  borde-radio: 0;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.modal.action-sheet .modal-content .action-sheet-content {
+  relleno: 20px 16px;
+  altura máxima: 460px;
+  desbordamiento: automático;
+}
+
+.modal.action-sheet .modal-content .action-sheet-content .iconbox {
+  tamaño de fuente: 64px;
+  margen: 10px 0 5px 0;
+  alineación de texto: centro;
+}
+
+.modal.action-sheet .modal-content .modal-header {
+  bloqueo de pantalla;
+  relleno: 2px 20px;
+}
+
+.modal.action-sheet .modal-content .modal-header .modal-title {
+  relleno: 0;
+  margen: 0;
+  alineación de texto: centro;
+  bloqueo de pantalla;
+  tamaño de fuente: 15px;
+  relleno: 10px 0;
+  color: #27173E;
+  peso de fuente: 500;
+}
+
+.modal.action-sheet .modal-content .modal-body {
+  relleno: 0;
+}
+
+.acción-botón-lista {
+  relleno: 0;
+  margen: 0;
+}
+
+.lista-de-botones-de-acción > li {
+  bloqueo de pantalla;
+}
+
+.lista-de-botones-de-acción > li .btn {
+  relleno: 0;
+  pantalla: flexible;
+  ancho: 100%;
+  altura mínima: 50px;
+  tamaño de fuente: 15px;
+  color: #27173E;
+  altura de línea: 1,1 em;
+  justificar-contenido: espacio-entre;
+  peso de fuente: 400;
+  border-radius: 0 !importante;
+  relleno: 10px 16px;
+}
+
+.lista-de-botones-de-acción > li .btn:activo, .lista-de-botones-de-acción > li .btn.activo {
+  fondo: rgba(220, 220, 233, 0.3);
+}
+
+.action-button-list > li .btn.text-primary {
+  color: #6236FF !importante;
+}
+
+.action-button-list > li .btn.text-secundario {
+  color: #8494A8 !importante;
+}
+
+.action-button-list > li .btn.text-danger {
+  color: #FF396F !importante;
+}
+
+.action-button-list > li .btn.text-success {
+  color: #1DCC70 !importante;
+}
+
+.action-button-list > li .btn.text-warning {
+  color: #FFB400 !importante;
+}
+
+.action-button-list > li .btn.text-info {
+  color: #05D0A4 !importante;
+}
+
+.action-button-list > li .btn.text-light {
+  color: #fff !importante;
+}
+
+.action-button-list > li .btn.text-dark {
+  color: #27173E !importante;
+}
+
+.action-button-list > li .btn > span {
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: inicio flexible;
+}
+
+.action-button-list > li .btn .icon,
+.action-button-list > li .btn ion-icon {
+  ancho: 24px !importante;
+  altura: 24px;
+  pantalla: en línea-flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  margen derecho: 10px;
+  margen izquierdo: -5px;
+  tamaño de fuente: 24px;
+  altura de línea: 1em;
+}
+
+.action-button-list > li.action-divider {
+  altura: 1px;
+  fondo: #DCDCE9;
+}
+
+.action-sheet.inset .modal-dialog {
+  relleno: 16px;
+}
+
+.action-sheet.inset .modal-dialog .modal-content {
+  borde-radio: 16px;
+  fondo acolchado: 0;
+  margen-inferior: env(área-segura-recuadro-inferior);
+}
+
+.action-sheet.inset .action-button-list > li:last-child .btn {
+  border-radius: 0 0 16px 16px !importante;
+}
+
+.action-sheet.action-icon .modal-content {
+  borde-radio: 48px 48px 0 0;
+}
+
+.action-sheet.action-icon .modal-content .modal-header {
+  borde inferior: 0;
+  alineación de texto: centro;
+  relleno: 0;
+  margen: 0;
+}
+
+.action-sheet.action-icon .modal-content .modal-header .modal-title {
+  tamaño de fuente: 17px;
+  margen: 0;
+  relleno: 0;
+}
+
+.action-sheet.action-icon .modal-content .modal-header .modal-icon {
+  tamaño de fuente: 32px;
+  ancho: 64px;
+  altura: 64px;
+  fondo: #6236FF;
+  color: #fff;
+  pantalla: en línea-flexible;
+  borde-radio: 200px;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  sombra de caja: 0 0 0 10px #FFF;
+  margen: -32px 0 14px 0 !importante;
+}
+
+.dialogbox .modal-diálogo {
+  posición: fija;
+  izquierda: 0;
+  superior: 0;
+  inferior: 0;
+  derecha: 0;
+  índice z: 12000;
+  pantalla: flexible;
+  desbordamiento: automático;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  transformar: traducir (0, 0)! importante;
+  transformar: escala(0.8) !importante;
+}
+
+.dialogbox .modal-dialog .form-group {
+  alineación de texto: izquierda;
+}
+
+.dialogbox .modal-diálogo .modal-contenido {
+  ancho máximo: 300px;
+  margen: automático;
+  altura máxima: 560px;
+  desbordamiento: automático;
+  borde: 0;
+  borde-radio: 16px;
+}
+
+.dialogbox .modal-dialog .modal-content .btn-list {
+  margen: 0;
+}
+
+.dialogbox .modal-dialog .modal-content .btn-list .btn {
+  relleno: 0px 10px;
+  altura mínima: 58px;
+  borde-radio: 0;
+  margen: 0;
+  borde: 0;
+  borde inferior: 1px sólido #DCDCE9 !importante;
+  tamaño de fuente: 15px;
+}
+
+.cuadro de diálogo -list .btn:activo, .dialogbox .modal-dialog .modal-content .btn-list .btn.active {
+  fondo: rgba(220, 220, 233, 0.3) !importante;
+}
+
+.dialogbox .modal-dialog .modal-content .btn-list .btn:último hijo {
+  borde-radio: 0 0 16px 16px;
+  borde inferior: 0 !importante;
+}
+
+.dialogbox .modal-dialog .modal-content .btn-inline {
+  pantalla: flexible;
+  margen: 0;
+  fondo: #DCDCE9;
+}
+
+.dialogbox .modal-dialog .modal-content .btn-inline .btn {
+  ancho: 100%;
+  borde-radio: 0;
+  altura mínima: 58px;
+  borde: 0 !importante;
+  tamaño de fuente: 15px;
+  margen derecho: 1px;
+  fondo: #FFF;
+}
+
+.cuadro de diálogo -inline .btn:activo, .dialogbox .modal-dialog .modal-content .btn-inline .btn.active {
+  fondo: rgba(255, 255, 255, 0.8) !importante;
+}
+
+.dialogbox .modal-dialog .modal-content .btn-inline .btn:último hijo {
+  margen derecho: 0;
+  border-radius: 0 0 16px 0 !importante;
+}
+
+.dialogbox .modal-dialog .modal-content .btn-inline .btn:primer hijo {
+  borde-radio: 0 0 0 16px !importante;
+}
+
+.dialogbox .modal-dialog .modal-content .modal-header {
+  borde: 0;
+  relleno: 20px 20px 10px 20px;
+}
+
+.dialogbox .modal-dialog .modal-content .modal-header .modal-title {
+  color: #27173E;
+  alineación de texto: centro;
+  margen: 0 automático;
+  tamaño de fuente: 17px;
+}
+
+.dialogbox .modal-dialog .modal-content .modal-body {
+  relleno: 0 20px;
+  margen inferior: 30px;
+  alineación de texto: centro;
+  tamaño de fuente: 15px;
+}
+
+.dialogbox .modal-dialog .modal-content .modal-footer {
+  borde: 0;
+  borde superior: 1px sólido #DCDCE9;
+  relleno: 0;
+  bloqueo de pantalla;
+  alineación de texto: derecha;
+}
+
+.dialogbox.show .modal-diálogo {
+  transformar: traducir (0, 0)! importante;
+  transformar: escala(1) !importante;
+}
+
+.modal-icono {
+  tamaño de fuente: 60px;
+  altura de línea: 1em;
+  margen superior: 30px;
+  margen inferior: -10px;
+  color: #6236FF;
+  alineación de texto: centro;
+}
+
+.modalbox {
+  padding-top: env(safe-area-inset-top);
+  desbordamiento: oculto;
+}
+
+.modalbox .modal-diálogo {
+  transformar: traducir (0, 100%) !importante;
+  ancho mínimo: 100%;
+  margen: 0;
+  transición: 0.5s todo !importante;
+  posición: fija;
+  izquierda: 0;
+  superior: 0;
+  derecha: 0;
+  inferior: 0;
+  margen-superior: env(área-segura-recuadro-superior);
+}
+
+.modalbox .modal-diálogo .modal-contenido {
+  borde-radio: 0;
+  borde: 0;
+  margen: automático;
+  desbordamiento: oculto;
+  acolchado superior: 56px;
+  posición: absoluta;
+  izquierda: 0;
+  derecha: 0;
+  inferior: 0;
+  superior: 0;
+}
+
+.modalbox .modal-dialog .modal-content .modal-header {
+  borde: 0;
+  relleno: 0;
+  altura mínima: 56px;
+  relleno: 10px 16px;
+  borde-radio: 0;
+  pantalla: flexible;
+  borde inferior: 1px sólido #DCDCE9;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+  margen: 0;
+  posición: fija;
+  izquierda: 0;
+  derecha: 0;
+  superior: 0;
+  ancho: 100%;
+  índice z: 100;
+  fondo: #FFF;
+}
+
+.modalbox .modal-dialog .modal-content .modal-header .modal-title {
+  margen: 0;
+  color: #27173E;
+  tamaño de fuente: 17px;
+}
+
+.modalbox .modal-dialog .modal-content .modal-body {
+  relleno: 20px 16px;
+  desbordamiento: automático;
+}
+
+.modalbox.show .modal-diálogo {
+  transformar: traducir (0, 0)! importante;
+}
+
+.panelbox .modal-diálogo {
+  margen: 0;
+  posición: fija;
+  izquierda: 0;
+  superior: 0;
+}
+
+.panelbox .modal-diálogo .modal-contenido {
+  borde: 0;
+  borde-radio: 0;
+  ancho: 300px;
+  altura: 100vh;
+  desbordamiento: automático;
+  padding-top: env(safe-area-inset-top);
+}
+
+.panelbox .modal-dialog .modal-content .modal-header {
+  borde inferior: 0;
+  relleno: 10px 16px;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+  altura mínima: 56px;
+}
+
+.panelbox .modal-dialog .modal-content .modal-header .modal-title {
+  color: #27173E;
+}
+
+.panelbox .modal-dialog .modal-content .modal-body {
+  relleno: 10px 16px;
+}
+
+.panelbox.show .modal-diálogo {
+  transformar: traducir (0, 0)! importante;
+}
+
+.panelbox-izquierda .modal-diálogo {
+  transformar: traducir (-100%, 0)! importante;
+}
+
+.panelbox-right .modal-diálogo {
+  transformar: traducir (100%, 0)! importante;
+  izquierda: automático;
+  derecha: 0;
+}
+
+.información sobre herramientas {
+  índice z: 200001;
+}
+
+.tooltip .tooltip-interno {
+  tamaño de fuente: 13px;
+  relleno: 6px 10px;
+  borde-radio: 10px;
+}
+
+.dropdown .dropdown-menú,
+.dropup .menú desplegable {
+  borde: 1px sólido #DCDCE9;
+  ancho mínimo: 120px;
+  relleno: 8px 0;
+  borde-radio: 10px;
+  sombra de caja: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.dropdown .dropdown-menu .dropdown-item,
+.dropup .dropdown-menu .dropdown-item {
+  relleno: 9px 16px;
+  altura de línea: 1,2 em;
+  color: #27173E;
+  tamaño de fuente: 15px;
+  pantalla: flexible;
+  alinear elementos: centro;
+}
+
+.dropdown .dropdown-menu .dropdown-item:hover, .dropdown .dropdown-menu .dropdown-item:activo,
+.dropup .dropdown-menu .dropdown-item:hover,
+.dropup .dropdown-menu .dropdown-item:activo {
+  fondo: rgba(220, 220, 233, 0.5);
+  color: #27173E;
+}
+
+.dropdown .dropdown-menu .dropdown-item .dropdown-divisor,
+.dropup .dropdown-menu .dropdown-item .dropdown-divider {
+  borde superior: 1px sólido #DCDCE9;
+}
+
+.dropdown .dropdown-menu .dropdown-header,
+.dropup .dropdown-menu .dropdown-header {
+  relleno: 9px 16px;
+  color: #958d9e;
+  peso de fuente: 400;
+  tamaño de fuente: 11px;
+}
+
+.desplegable .menú desplegable .texto,
+.dropup .menú desplegable .texto {
+  relleno: 9px 16px;
+  color: #958d9e;
+}
+
+.desplegable .menú desplegable .icono,
+.dropdown .dropdown-menu ion-icon,
+.dropup .dropdown-menu .icon,
+.dropup .dropdown-menu icono de iones {
+  tamaño de fuente: 17px;
+  margen derecho: 6px;
+  ancho: 20px;
+  altura: 20px;
+  justificar-contenido: centro;
+  alinear elementos: centro;
+  altura de línea: 1em;
+  pantalla: en línea-flexible;
+  color: #27173E;
+}
+
+.appHeader .menú desplegable {
+  margen superior: -12px !importante;
+}
+
+.dropdown-toggle:después de {
+  borde-radio: 4px;
+  margen izquierdo: 7px;
+}
+
+.bg-principal {
+  fondo: #6236FF;
+}
+
+.bg-primario {
+  fondo: #6236FF !importante;
+  color: #FFF;
+}
+
+.bg-secundario {
+  fondo: #8494A8 !importante;
+  color: #FFF;
+}
+
+.bg-éxito {
+  fondo: #1DCC70 !importante;
+  color: #FFF;
+}
+
+.bg-peligro {
+  fondo: #FF396F !importante;
+  color: #FFF;
+}
+
+.bg-advertencia {
+  fondo: #FFB400 !importante;
+  color: #FFF;
+}
+
+.bg-info {
+  fondo: #05D0A4 !importante;
+  color: #FFF;
+}
+
+.bg-luz {
+  fondo: rgba(255, 255, 255, 0.5) !importante;
+}
+
+.bg-oscuro {
+  fondo: #222 !importante;
+  color: #FFF;
+}
+
+.texto-primario,
+a.text-primary {
+  color: #6236FF !importante;
+}
+
+.text-secundario,
+a.text-secundario {
+  color: #8494A8 !importante;
+}
+
+.texto-éxito,
+a.texto-éxito {
+  color: #1DCC70 !importante;
+}
+
+.texto-peligro,
+a.texto-peligro {
+  color: #FF396F !importante;
+}
+
+.text-advertencia,
+a.texto-advertencia {
+  color: #FFB400 !importante;
+}
+
+.text-info,
+a.text-info {
+  color: #05D0A4 !importante;
+}
+
+.texto-luz,
+a.texto-luz {
+  color: #FFF !importante;
+}
+
+.text-oscuro,
+a.texto-oscuro {
+  color: #27173E !importante;
+}
+
+.alerta {
+  margen: 0;
+  relleno: 8px 14px;
+  borde: 0;
+  tamaño de fuente: 13px;
+  borde-radio: 10px;
+}
+
+.alerta .btn-cerrar {
+  text-shadow: ninguno !importante;
+  ancho: 40px;
+  relleno: 0;
+  opacidad: 1;
+  margen superior: 3px;
+  altura de línea: 1em;
+  altura: 36px !importante;
+  esquema: 0 !importante;
+  box-shadow: ninguno !importante;
+  fondo: ninguno;
+}
+
+.alert .btn-close:hover, .alert .btn-close:activo, .alert .btn-close:enfoque {
+  esquema: 0 !importante;
+}
+
+.alert .btn-close: pasar el cursor {
+  opacidad: .7;
+}
+
+.alert .btn-close:antes, .alert .btn-close:después {
+  posición: absoluta;
+  ancho: 16px;
+  altura: 2px;
+  izquierda: 12px;
+  arriba: 16px;
+  contenido: '';
+  bloqueo de pantalla;
+  fondo: #FFF;
+  borde-radio: 20px;
+}
+
+.alert .btn-close:antes de {
+  transformar: rotar (45 grados);
+}
+
+.alert .btn-close:después de {
+  transformar: rotar (-45 grados);
+}
+
+.alerta .alerta-título {
+  margen: 4px 0;
+  tamaño de fuente: 15px;
+  peso de fuente: 500;
+}
+
+.alert.alert-desechable {
+  relleno derecho: 56px;
+}
+
+.alerta-imagen {
+  pantalla: flexible;
+}
+
+.imagen de alerta .img-envoltura {
+  margen derecho: 10px;
+}
+
+.alerta-imagen .img-envoltura .imagen {
+  ancho: 24px;
+  altura: 24px;
+}
+
+.imagen de alerta .icon-wrap {
+  margen derecho: 10px;
+  ancho: 24px;
+  altura: 24px;
+}
+
+.con imagen de alerta .icon-wrap i.icon,
+.alert-imaged .icon-wrap ion-icon {
+  tamaño de fuente: 24px;
+  margen: 0;
+}
+
+.alerta-principal {
+  fondo: #6236FF;
+  color: #fff;
+  borde: 1px sólido #6236FF;
+}
+
+.alerta-principal a {
+  color: #fff !importante;
+  decoración de texto: subrayado;
+}
+
+.alerta-principal .alerta-título {
+  color: #FFF;
+}
+
+.alerta-principal .cerrar {
+  color: #FFF;
+}
+
+.alerta-esquema-primario {
+  fondo: transparente;
+  color: #6236FF;
+  borde: 2px sólido #6236FF;
+}
+
+.alerta-esquema-principal a {
+  color: #6236FF !importante;
+  decoración de texto: subrayar! importante;
+}
+
+.alert-outline-primary .alert-título {
+  color: #6236FF;
+}
+
+.alert-outline-primary .btn-close {
+  color: #6236FF;
+  opacidad: 1;
+}
+
+.alert-outline-primary .btn-close:antes, .alert-outline-primary .btn-close:después {
+  fondo: #6236FF;
+}
+
+.alerta-secundario {
+  fondo: #8494A8;
+  color: #fff;
+  borde: 1px sólido #8494A8;
+}
+
+.alerta-secundario a {
+  color: #fff !importante;
+  decoración de texto: subrayado;
+}
+
+.alerta-secundaria .alerta-título {
+  color: #FFF;
+}
+
+.alerta-secundario .cerrar {
+  color: #FFF;
+}
+
+.alerta-esquema-secundario {
+  fondo: transparente;
+  color: #8494A8;
+  borde: 2px sólido #8494A8;
+}
+
+.alerta-esquema-secundario a {
+  color: #8494A8 !importante;
+  decoración de texto: subrayar! importante;
+}
+
+.alert-outline-secundario .alert-title {
+  color: #8494A8;
+}
+
+.alert-outline-secundario .btn-cerrar {
+  color: #8494A8;
+  opacidad: 1;
+}
+
+.alert-outline-secundario .btn-close:antes, .alert-outline-secundario .btn-close:después {
+  fondo: #8494A8;
+}
+
+.alerta-éxito {
+  fondo: #1DCC70;
+  color: #fff;
+  borde: 1px sólido #1DCC70;
+}
+
+.alerta-éxito a {
+  color: #fff !importante;
+  decoración de texto: subrayado;
+}
+
+.alerta-éxito .alerta-título {
+  color: #FFF;
+}
+
+.alerta-éxito .cerrar {
+  color: #FFF;
+}
+
+.alerta-esquema-éxito {
+  fondo: transparente;
+  color: #1DCC70;
+  borde: 2px sólido #1DCC70;
+}
+
+.alerta-esquema-éxito a {
+  color: #1DCC70 !importante;
+  decoración de texto: subrayar! importante;
+}
+
+.alert-outline-success .alert-title {
+  color: #1DCC70;
+}
+
+.alert-outline-success .btn-close {
+  color: #1DCC70;
+  opacidad: 1;
+}
+
+.alert-outline-success .btn-close:antes, .alert-outline-success .btn-close:después {
+  fondo: #1DCC70;
+}
+
+.alerta-peligro {
+  fondo: #FF396F;
+  color: #fff;
+  borde: 1px sólido #FF396F;
+}
+
+.alerta-peligro a {
+  color: #fff !importante;
+  decoración de texto: subrayado;
+}
+
+.alerta-peligro .alerta-título {
+  color: #FFF;
+}
+
+.alerta-peligro .cerrar {
+  color: #FFF;
+}
+
+.alerta-contorno-peligro {
+  fondo: transparente;
+  color: #FF396F;
+  borde: 2px sólido #FF396F;
+}
+
+.alerta-contorno-peligro a {
+  color: #FF396F !importante;
+  decoración de texto: subrayar! importante;
+}
+
+.alerta-contorno-peligro .alerta-título {
+  color: #FF396F;
+}
+
+.alerta-contorno-peligro .btn-cerrar {
+  color: #FF396F;
+  opacidad: 1;
+}
+
+.alert-outline-danger .btn-close:antes, .alert-outline-danger .btn-close:después {
+  fondo: #FF396F;
+}
+
+.alerta-advertencia {
+  fondo: #FFB400;
+  color: #fff;
+  borde: 1px sólido #FFB400;
+}
+
+.alerta-advertencia a {
+  color: #fff !importante;
+  decoración de texto: subrayado;
+}
+
+.alerta-advertencia .alerta-título {
+  color: #FFF;
+}
+
+.alerta-advertencia .cerrar {
+  color: #FFF;
+}
+
+.alerta-esquema-advertencia {
+  fondo: transparente;
+  color: #FFB400;
+  borde: 2px sólido #FFB400;
+}
+
+.alerta-esquema-advertencia a {
+  color: #FFB400 !importante;
+  decoración de texto: subrayar! importante;
+}
+
+.alerta-contorno-advertencia .alerta-título {
+  color: #FFB400;
+}
+
+.alerta-esquema-advertencia .btn-cerrar {
+  color: #FFB400;
+  opacidad: 1;
+}
+
+.alert-outline-warning .btn-close:antes, .alert-outline-warning .btn-close:después {
+  fondo: #FFB400;
+}
+
+.alert-info {
+  fondo: #05D0A4;
+  color: #fff;
+  borde: 1px sólido #05D0A4;
+}
+
+.alerta-info a {
+  color: #fff !importante;
+  decoración de texto: subrayado;
+}
+
+.alert-info .alert-título {
+  color: #FFF;
+}
+
+.alert-info .cerrar {
+  color: #FFF;
+}
+
+.alerta-esquema-info {
+  fondo: transparente;
+  color: #05D0A4;
+  borde: 2px sólido #05D0A4;
+}
+
+.alerta-esquema-info a {
+  color: #05D0A4 !importante;
+  decoración de texto: subrayar! importante;
+}
+
+.alert-outline-info .alert-título {
+  color: #05D0A4;
+}
+
+.alert-outline-info .btn-cerrar {
+  color: #05D0A4;
+  opacidad: 1;
+}
+
+.alert-outline-info .btn-close:antes, .alert-outline-info .btn-close:después {
+  fondo: #05D0A4;
+}
+
+.alerta-luz {
+  fondo: #FFF;
+  color: #27173E;
+}
+
+.alerta-oscuro {
+  fondo: #333;
+  color: #FFF;
+}
+
+.alerta-oscuro a {
+  color: #FFF !importante;
+  decoración de texto: subrayar! importante;
+}
+
+.alerta-contorno-oscuro {
+  fondo: transparente;
+  color: #333;
+  borde: 2px sólido #333;
+}
+
+.table-responsivo {
+  borde-radio: 10px;
+}
+
+.mesa {
+  color: #958d9e;
+  margen: 0;
+  tamaño de fuente: 13px;
+  altura de línea: 1,4 em;
+  borde-radio: 10px;
+}
+
+.tabla tr {
+  color del borde: #DCDCE9;
+}
+
+.table thehead th {
+  borde superior: 0;
+  borde inferior: 0;
+  color: #27173E;
+  peso de fuente: 500;
+}
+
+.tabla td,
+.tabla th {
+  borde superior: 1px sólido #DCDCE9;
+  relleno: 12px;
+}
+
+.table-striped > tbody > tr:nésimo-de-tipo(impar) {
+  fondo: rgba(220, 220, 233, 0.1);
+  color: #958d9e;
+}
+
+.table-borded {
+  borde-radio: 0px;
+}
+
+.table-borded td,
+.table-borded th {
+  color del borde: #DCDCE9;
+}
+
+.table.bg-primario,
+.table.bg-secundario,
+.table.bg-éxito,
+.table.bg-peligro,
+.table.bg-advertencia,
+.table.bg-info {
+  color: rgba(255, 255, 255, 0.8) !importante;
+}
+
+.table.bg-primary tr,
+.table.bg-primary td,
+.table.bg-principal th,
+.table.bg-secundario tr,
+.table.bg-secundario td,
+.table.bg-secundario th,
+.table.bg-éxito tr,
+.table.bg-éxito td,
+.table.bg-éxito th,
+.table.bg-peligro tr,
+.table.bg-peligro td,
+.table.bg-peligro th,
+.table.bg-advertencia tr,
+.table.bg-advertencia td,
+.table.bg-advertencia th,
+.table.bg-info tr,
+.table.bg-info td,
+.table.bg-info th {
+  borde-fondo-color: rgba(255, 255, 255, 0.2);
+}
+
+.table.bg-primary td,
+.table.bg-principal th,
+.table.bg-secundario td,
+.table.bg-secundario th,
+.table.bg-éxito td,
+.table.bg-éxito th,
+.table.bg-peligro td,
+.table.bg-peligro th,
+.table.bg-advertencia td,
+.table.bg-advertencia th,
+.table.bg-info td,
+.table.bg-info th {
+  borde-superior-color: rgba(255, 255, 255, 0.2);
+}
+
+.table.bg-principal thehead tr th,
+.table.bg-directorio secundario tr th,
+.table.bg-success thead tr th,
+.table.bg-peligro cabeza verdad,
+.table.bg-advertencia thehead tr th,
+.table.bg-info cabeza tr {
+  color: #fff;
+  peso de fuente: 500;
+}
+
+área de texto,
+.control de forma {
+  clip de fondo: caja de relleno;
+  imagen de fondo: degradado lineal (transparente, transparente);
+}
+
+.form-grupo {
+  ancho: 100%;
+}
+
+.form-grupo .etiqueta {
+  tamaño de fuente: 11px;
+  margen: 0;
+  peso de fuente: 500;
+  color: #27173E;
+  bloqueo de pantalla;
+  altura de línea: 1,2 em;
+  alineación de texto: izquierda;
+}
+
+área de texto .form-group {
+  redimensionar: ninguno;
+}
+
+.form-grupo .input-info {
+  tamaño de fuente: 11px;
+  color: #A9ABAD;
+}
+
+.form-group .clear-input {
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  color: #958d9e;
+  altura: 38px;
+  tamaño de fuente: 22px;
+  posición: absoluta;
+  derecha: -10px;
+  inferior: 0;
+  ancho: 32px;
+  opacidad: 0,5;
+  pantalla: ninguno;
+}
+
+.form-group .clear-input:hover, .form-group .clear-input:activo {
+  opacidad: 0,8;
+}
+
+.form-group .input-wrapper {
+  posición: relativa;
+}
+
+.form-group .input-wrapper.not-empty .clear-input {
+  pantalla: flexible;
+}
+
+.form-group .input-wrapper.active .label {
+  color: #6236FF !importante;
+}
+
+.form-group.basic {
+  relleno: 8px 0;
+  margen en: 0;
+}
+
+.form-group.basic .form-control,
+.form-group.basic .custom-select {
+  fondo: transparente;
+  borde: ninguno;
+  borde inferior: 1px sólido #DCDCE9;
+  relleno: 0 30px 0 0;
+  borde-radio: 0;
+  altura: 40px;
+  color: #27173E;
+  tamaño de fuente: 15px;
+}
+
+.form-group.basic .form-control:foco,
+.form-group.basic .custom-select:enfoque {
+  borde-fondo-color: #6236FF;
+  caja-sombra: inserción 0 -1px 0 0 #6236FF;
+}
+
+.form-group.basic .custom-select {
+  relleno derecho: 0;
+}
+
+.form-group.textarea básica.form-control {
+  altura: automático;
+  relleno: 7px 40px 7px 0;
+}
+
+.form-group.basic.animated .label {
+  margen superior: 20px;
+  opacidad: 0;
+  arriba: -3px;
+  transición: 0.2s todo;
+  posición: absoluta;
+}
+
+.form-group.basic.animated .input-wrapper {
+  acolchado superior: 5px;
+}
+
+.form-group.basic.animated .input-wrapper.not-empty .label {
+  margen superior: 0;
+  opacidad: 1;
+}
+
+.entrada de verificación {
+  tamaño de fuente: 32px !importante;
+  espaciado entre letras: 10px;
+  alineación de texto: centro;
+  borde-radio: 10px !importante;
+  borde: 1px sólido #DCDCE9 !importante;
+  ancho: 180px !importante;
+  relleno: 0 10px !importante;
+  margen: automático;
+  min-altura: 70px !importante;
+  peso de fuente: 700;
+  color: #27173E !importante;
+  box-shadow: ninguno !importante;
+  fondo: #fff !importante;
+}
+
+.entrada de verificación: enfoque {
+  border-color: #27173E !importante;
+}
+
+.form-control-lg {
+  tamaño de fuente: 20px !importante;
+}
+
+.formulario-seleccionar {
+  borde: 0;
+  box-shadow: 0 !importante;
+  esquema: 0 !importante;
+  color de fondo: transparente;
+}
+
+.form-select-lg {
+  altura: 48px;
+  tamaño de fuente: 20px !importante;
+}
+
+.grupo-de-entrada .grupo-de-entrada-texto {
+  fondo: transparente;
+  borde: 0;
+  borde inferior: 1px sólido #DCDCE9;
+  borde-radio: 0;
+  peso de fuente: 400;
+  color: #27173E;
+  altura: 40px;
+  ancho: automático;
+  relleno: 0 10px 0 0;
+}
+
+.cargar-archivo-personalizado {
+  posición: relativa;
+  pantalla: flexible;
+  ancho: 100%;
+  altura: 220px;
+}
+
+.entrada de carga de archivo personalizado [tipo = "archivo"] {
+  desbordamiento: oculto;
+  opacidad: 0;
+  posición: absoluta;
+  superior: 0;
+  izquierda: 0;
+  ancho: 0;
+  altura: 0;
+}
+
+.etiqueta de carga de archivos personalizados {
+  índice z: 1;
+  posición: absoluta;
+  izquierda: 0;
+  superior: 0;
+  inferior: 0;
+  derecha: 0;
+  desbordamiento: oculto;
+  color de fondo: rgba(220, 220, 233, 0.2);
+  tamaño de fondo: 45px 58px;
+  borde: 1px sólido #DCDCE9;
+  borde-radio: 10px;
+  margen: 0;
+}
+
+.custom-file-upload label span {
+  bloqueo de pantalla;
+  tamaño de fuente: 15px;
+  color: #A9ABAD;
+  altura: automático;
+  posición: absoluta;
+  arriba: 50%;
+  izquierda: 0;
+  derecha: 0;
+  peso de fuente: 500;
+  transformar: traducir (0%, -50%);
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  relleno: 10px 16px;
+  ancho: 100%;
+  alineación de texto: centro;
+  borde-radio: 0;
+}
+
+.etiqueta de carga de archivos personalizados .icono,
+.custom-file-upload label span ion-icon {
+  --ionicon-stroke-ancho: 32px;
+  tamaño de fuente: 48px;
+  color: #A9ABAD;
+}
+
+.etiqueta de carga de archivo personalizado span fuerte {
+  bloqueo de pantalla;
+  peso de fuente: 500;
+}
+
+.custom-file-upload label span i {
+  estilo de fuente: normal;
+  bloqueo de pantalla;
+}
+
+.etiqueta de carga de archivo personalizado.archivo cargado {
+  tamaño de fondo: portada;
+  posición de fondo: centro;
+}
+
+.custom-file-upload label.file-uploaded:before {
+  contenido: "";
+  ancho: 38px;
+  altura: 38px;
+  fondo: #1DCC70;
+  borde-radio: 100%;
+  pantalla: flexible;
+  imagen de fondo: url("data:image/svg+xml,%0A%3Csvg width='23px' height='20px' viewBox='0 0 23 20' version='1.1' xmlns='http://www .w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Página-1' trazo='ninguno' ancho de trazo='1 ' fill='ninguno' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline id='Path' stroke='%23FFFFFF' stroke-width='2.4' puntos ='21.2 2 7.76 18 2 12'%3E%3C/polilínea%3E%3C/g%3E%3C/svg%3E");
+  repetición de fondo: sin repetición;
+  posición de fondo: centro centro;
+  posición: absoluta;
+  izquierda: 50%;
+  arriba: calc(50% + -22px);
+  transformar: traducir (-50%, -50%);
+}
+
+.etiqueta de carga de archivo personalizado.etiqueta de carga de archivo {
+  borde-color: transparente;
+}
+
+.etiqueta de carga de archivo personalizado.intervalo de carga de archivo {
+  inferior: 0;
+  izquierda: 0;
+  arriba: automático;
+  transformar: traducir (0, 0);
+  tamaño de fuente: 11px;
+  color: #958d9e;
+  color de fondo: #DCDCE9;
+}
+
+.form-group.boxed {
+  margen: 0;
+  relleno: 8px 0;
+}
+
+.form-group.boxed .form-control {
+  fondo: #fff;
+  sombra de caja: ninguna;
+  altura: 42px;
+  borde-radio: 10px;
+  relleno: 0 40px 0 16px;
+}
+
+.form-group.boxed .form-control:foco {
+  color del borde: #6236FF;
+}
+
+.form-group.boxed textarea.form-control {
+  altura: automático;
+  relleno: 7px 40px 7px 16px;
+}
+
+.form-group.boxed .clear-input {
+  derecha: 0;
+  altura: 42px;
+  ancho: 40px;
+}
+
+.form-group.boxed .label {
+  margen inferior: 8px;
+}
+
+.nav-tabs {
+  ancho: 100%;
+}
+
+.nav-tabs.capsulado {
+  borde: 0;
+  fondo: rgba(220, 220, 233, 0.4);
+  borde-radio: 10px;
+  pantalla: flexible;
+}
+
+.nav-tabs.capsuled .nav-item {
+  flexión: 1;
+  ancho: 100%;
+  alineación de texto: centro;
+  pantalla: flexible;
+  justificar-contenido: centro;
+  alinear elementos: centro;
+  margen: 0;
+  relleno: 0;
+}
+
+.nav-tabs.capsuled .nav-item .nav-link {
+  color: #958d9e;
+  peso de fuente: 500;
+  tamaño de fuente: 13px;
+  borde: 0 !importante;
+  altura de línea: 1,2 em;
+  ancho: 100%;
+  borde-radio: 10px;
+  relleno: 6px 10px;
+  altura: 30px;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  margen: 4px !importante;
+}
+
+.nav-tabs.capsuled .nav-item .nav-link .icon,
+.nav-tabs.capsuled .nav-item .nav-link ion-icon {
+  margen derecho: 8px;
+  margen izquierdo: 8px;
+  altura de línea: 1em;
+  tamaño de fuente: 18px;
+}
+
+.nav-tabs.capsuled .nav-item .nav-link.active {
+  color: #27173E;
+  sombra de caja: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.nav-tabs {
+  ancho: 100%;
+}
+
+.nav-tabs.lined {
+  borde: 0;
+  fondo: transparente;
+  borde-radio: 0;
+  pantalla: flexible;
+}
+
+.nav-tabs.lined .nav-item {
+  flexión: 1;
+  ancho: 100%;
+  alineación de texto: centro;
+  pantalla: flexible;
+  justificar-contenido: centro;
+  alinear elementos: centro;
+  margen: 0;
+  relleno: 0;
+}
+
+.nav-tabs.lined .nav-item .nav-link {
+  color: #958d9e;
+  peso de fuente: 500;
+  tamaño de fuente: 13px;
+  borde: 0 !importante;
+  borde inferior: 2px sólido transparente! importante;
+  altura de línea: 1,2 em;
+  ancho: 100%;
+  borde-radio: 0;
+  relleno: 6px 10px;
+  altura: 50px;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  margen: 0 !importante;
+  border-bottom-color: 2px sólido;
+}
+
+.nav-tabs.lined .nav-item .nav-link .icon,
+.nav-tabs.lined .nav-item .nav-link ion-icon {
+  margen derecho: 8px;
+  margen izquierdo: 8px;
+  altura de línea: 1em;
+  tamaño de fuente: 18px;
+}
+
+.nav-tabs.lined .nav-item .nav-link.active {
+  color: #6236FF;
+  fondo: transparente;
+  border-bottom-color: #6236FF !importante;
+}
+
+.formulario {
+  relleno: 0;
+  margen: 0;
+  min-altura: auto;
+  altura: automático;
+}
+
+.form-check .form-check-entrada {
+  pantalla: ninguno;
+}
+
+.form-check .form-check-etiqueta {
+  cursor: puntero;
+  posición: relativa;
+  altura mínima: 20px;
+  relleno: 0 0 0 32px;
+  altura de línea: 1,7 em;
+  color: #27173E;
+}
+
+.form-check .form-check-label:después de {
+  posición: absoluta;
+  izquierda: 0;
+  arriba: 2px;
+  contenido: "";
+  bloqueo de pantalla;
+  ancho: 22px;
+  altura: 22px;
+  fondo: transparente;
+  borde-radio: 100px;
+  borde: 1px sólido #DCDCE9;
+}
+
+.form-check .form-check-label:before {
+  contenido: "";
+  bloqueo de pantalla;
+  ancho: 22px;
+  altura: 22px;
+  posición: absoluta;
+  izquierda: 0;
+  arriba: 2px;
+  índice z: 3;
+  opacidad: 0;
+  imagen de fondo: url("datos:imagen/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none ' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+}
+
+.form-check-input[tipo="radio"] ~ .form-check-label:before {
+  imagen de fondo: url("data:image/svg+xml,%0A%3Csvg width='8px' height='8px' viewBox='0 0 8 8' version='1.1' xmlns='http://www .w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Página-1' trazo='ninguno' ancho de trazo='1 ' fill='ninguno' fill-rule='evenodd'%3E%3Ccircle id='Oval' fill='%23FFFFFF' cx='4' cy='4' r='4'%3E%3C/circle% 3E%3C/g%3E%3C/svg%3E");
+  repetición de fondo: sin repetición;
+  posición de fondo: centro centro;
+}
+
+.form-check-input:marcado ~ .form-check-label:después de {
+  color de fondo: #6236FF;
+  border-color: #6236FF !importante;
+}
+
+.form-check-input:marcado ~ .form-check-label:before {
+  opacidad: 1;
+}
+
+.form-check-inline {
+  margen derecho: 0;
+}
+
+.form-check-inline .form-check-label {
+  margen inferior: -3px;
+  relleno-izquierda: 24px;
+}
+
+.input-list .form-check:después de {
+  contenido: "";
+  altura: 1px;
+  fondo: #DCDCE9;
+  bloqueo de pantalla;
+  margen izquierdo: 54px;
+}
+
+.input-list .form-check .form-check-label {
+  altura mínima: 50px;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+  transición: 0.1s todo;
+  relleno: 6px 16px 6px 54px;
+}
+
+.input-list .form-check .form-check-label:antes, .input-list .form-check .form-check-label:después {
+  izquierda: 16px;
+  arriba: 14px;
+}
+
+.input-list .form-check .form-check-label:activo {
+  fondo: rgba(220, 220, 233, 0.3);
+}
+
+.input-list .form-check:último-hijo:después de {
+  altura: 0;
+}
+
+.cambio de forma {
+  altura: 30px;
+}
+
+.form-switch .form-verificar-etiqueta {
+  ancho: 56px;
+  altura: 30px;
+  relleno: 0;
+  margen: 0;
+}
+
+.form-switch .form-check-label:después de {
+  altura: 30px;
+  ancho: 56px;
+  fondo: #DCDCE9;
+  borde: 1px sólido #ccccdf;
+  transición: .1s lineal;
+}
+
+.form-switch .form-check-label:before {
+  opacidad: 1;
+  borde-radio: 100px;
+  ancho: 24px;
+  altura: 24px;
+  arriba: 5px;
+  izquierda: 4px;
+  fondo: #ffffff;
+  sombra de caja: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+  transición: .15s facilidad de entrada y salida;
+}
+
+.form-switch .form-check-input:checked ~ .form-check-label:before {
+  izquierda: 28px;
+}
+
+.mensaje-divisor {
+  tamaño de fuente: 12px;
+  alineación de texto: centro;
+  relleno: 5px 0;
+  color: #A9ABAD;
+}
+
+.mensaje-elemento {
+  pantalla: flexible;
+  alinear elementos: extremo flexible;
+  justificar-contenido: inicio flexible;
+  relleno: 6px 16px;
+  margen derecho: 60px;
+}
+
+.mensaje-elemento .burbuja {
+  relleno: 12px 12px;
+  fondo: #DCDCE9;
+  borde-radio: 24px 24px 24px 0;
+  color: #27173E;
+  pantalla: bloque en línea;
+  margen superior: 4px;
+  altura de línea: 1,4 em;
+}
+
+.mensaje-elemento .título {
+  tamaño de fuente: 12px;
+  peso de fuente: 500;
+  color: #958d9e;
+  altura de línea: 1,2 em;
+  relleno: 0 0 0 10px;
+}
+
+.mensaje-elemento .pie de página {
+  tamaño de fuente: 12px;
+  relleno: 0 10px;
+  alineación de texto: derecha;
+  altura de línea: 1em;
+  margen superior: 5px;
+  color: #27173E;
+  opacidad: .4;
+  altura: 14px;
+}
+
+.mensaje-elemento .avatar {
+  margen derecho: 10px;
+  ancho: 32px;
+  altura: automático;
+  borde-radio: 100%;
+  margen inferior: 18px;
+}
+
+.mensaje-elemento.usuario {
+  justificar contenido: extremo flexible;
+  margen derecho: 0;
+  margen izquierdo: 60px;
+}
+
+.mensaje-elemento.usuario .burbuja {
+  fondo: #6236FF !importante;
+  color: #FFF;
+  borde-radio: 16px 16px 0 16px;
+}
+
+.chatFooter {
+  altura mínima: 56px;
+  fondo: #FFF;
+  borde superior: 1px sólido #DCDCE9;
+  posición: fija;
+  izquierda: 0;
+  derecha: 0;
+  inferior: 0;
+  ancho: 100%;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+  relleno: 0 14px;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.chatFooter .form-grupo {
+  ancho: calc(100% - 100px);
+}
+
+Formulario .chatFooter {
+  ancho: 100%;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+}
+
+.Progreso {
+  altura: 14px;
+  borde-radio: 10px;
+}
+
+.barra de progreso {
+  fondo: #6236FF;
+  altura: 14px;
+  altura de línea: 1em;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  tamaño de fuente: 10px;
+  peso de fuente: 500;
+  espaciado entre letras: 0;
+}
+
+.chip {
+  fondo: #DCDCE9;
+  tamaño de fuente: 13px;
+  color: #27173E;
+  altura de línea: 1em;
+  altura: 26px;
+  pantalla: en línea-flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+  relleno: 0;
+  borde-radio: 100px;
+}
+
+.chip .chip-etiqueta {
+  relleno: 0 12px;
+}
+
+.chip.chip-esquema {
+  fondo: transparente !importante;
+  caja-sombra: inserción 0 0 0 1px #DCDCE9;
+}
+
+.chip.chip-media {
+  posición: relativa;
+  relleno-izquierda: 20px;
+}
+
+.chip.chip-media img {
+  ancho: 25px;
+  altura: 25px;
+  borde-radio: 100px;
+  posición: absoluta;
+  izquierda: 0;
+  superior: 0;
+}
+
+.chip .chip-icono {
+  posición: absoluta;
+  izquierda: 0;
+  superior: 0;
+  ancho: 26px;
+  altura: 26px;
+  margen: 0;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  borde-radio: 100px;
+  fondo: #958d9e;
+  color: #fff;
+  tamaño de fuente: 14px;
+}
+
+.chip .chip-eliminar {
+  ancho: 26px;
+  margen izquierdo: -10px;
+  altura: 26px;
+  pantalla: en línea-flexible;
+  color: #27173E;
+  opacidad: 0,7;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  tamaño de fuente: 16px;
+  borde-radio: 100px;
+}
+
+.chip .chip-delete: hover, .chip .chip-delete:activo {
+  opacidad: 1;
+}
+
+.chip-primario {
+  fondo: #6236FF !importante;
+  color: #fff;
+}
+
+.chip-primary .chip-delete {
+  color: #fff;
+}
+
+.chip-primario.chip-contorno {
+  color: #6236FF !importante;
+  box-shadow: inserción 0 0 0 1px #6236FF !importante;
+}
+
+.chip-peligro {
+  fondo: #FF396F !importante;
+  color: #fff;
+}
+
+.chip-peligro .chip-eliminar {
+  color: #fff;
+}
+
+.chip-peligro.chip-contorno {
+  color: #FF396F !importante;
+  box-shadow: inserción 0 0 0 1px #FF396F !importante;
+}
+
+.chip-éxito {
+  fondo: #1DCC70 !importante;
+  color: #fff;
+}
+
+.chip-éxito .chip-eliminar {
+  color: #fff;
+}
+
+.chip-éxito.chip-esquema {
+  color: #1DCC70 !importante;
+  box-shadow: inserción 0 0 0 1px #1DCC70 !importante;
+}
+
+.chip-advertencia {
+  fondo: #FFB400 !importante;
+  color: #fff;
+}
+
+.chip-advertencia .chip-eliminar {
+  color: #fff;
+}
+
+.chip-advertencia.chip-contorno {
+  color: #FFB400 !importante;
+  box-shadow: inserción 0 0 0 1px #FFB400 !importante;
+}
+
+.chip-info {
+  fondo: #05D0A4 !importante;
+  color: #fff;
+}
+
+.chip-info .chip-eliminar {
+  color: #fff;
+}
+
+.chip-info.chip-contorno {
+  color: #05D0A4 !importante;
+  box-shadow: inserción 0 0 0 1px #05D0A4 !importante;
+}
+
+.chip-luz {
+  fondo: #fff !importante;
+  color: #222 !importante;
+}
+
+.chip-light .chip-eliminar {
+  color: #222 !importante;
+}
+
+.chip-luz.chip-contorno {
+  color: #fff !importante;
+  box-shadow: inserción 0 0 0 1px #fff !importante;
+}
+
+.chip-oscuro {
+  fondo: #222 !importante;
+  color: #fff;
+}
+
+.chip-dark .chip-delete {
+  color: #fff;
+}
+
+.chip-oscuro.chip-contorno {
+  color: #222 !importante;
+  box-shadow: inserción 0 0 0 1px #222 !importante;
+}
+
+#búsqueda {
+  bloqueo de pantalla;
+  relleno: 10px 16px 0 16px;
+  arriba: -100px;
+  transición: .2s todo fácil de entrar y salir;
+  margen-superior: env(área-segura-recuadro-superior);
+}
+
+#buscar.mostrar {
+  bloqueo de pantalla;
+  superior: 0;
+}
+
+.Formulario de búsqueda {
+  bloqueo de pantalla;
+  ancho: 100%;
+}
+
+.caja de búsqeda {
+  ancho: 100%;
+  margen: 0;
+  posición: relativa;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+}
+
+.caja de búsqueda .control de forma {
+  sombra de caja: ninguna;
+  borde-radio: 10px;
+  borde: 1px sólido #bdbdd5;
+  altura: 36px;
+  relleno: 0 16px 0 36px;
+}
+
+.caja de búsqueda .form-control:foco {
+  color del borde: #adadcb;
+}
+
+.searchbox .form-control:focus ~ .input-icon {
+  color: #27173E;
+}
+
+.caja de búsqueda .icono {
+  tamaño de fuente: 26px;
+  altura de línea: 1em;
+  margen: 0;
+}
+
+.caja de búsqueda .cerrar {
+  opacidad: 1;
+  color: #A9ABAD;
+}
+
+.caja de búsqueda .icono de entrada {
+  tamaño de fuente: 26px;
+  posición: absoluta;
+  izquierda: 0;
+  ancho: 36px;
+  altura: 36px;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  color: #A9ABAD;
+  superior: 0;
+}
+
+.splide {
+  margen inferior: -20px !importante;
+}
+
+.splide:activo {
+  cursor: agarrar;
+}
+
+.splide .splide__lista {
+  relleno inferior: 20px !importante;
+}
+
+.carrusel-single .splide__slide {
+  margen izquierdo: -16px !importante;
+  relleno derecho: 16px! importante;
+}
+
+.carrusel-múltiple .splide__slide {
+  margen izquierdo: -8px !importante;
+  relleno derecho: 8px! importante;
+}
+
+.carrusel-pequeño .splide__slide {
+  margen izquierdo: -8px !importante;
+  relleno derecho: 0px !importante;
+}
+
+.carrusel-pequeño .splide__slide:primer hijo {
+  margen izquierdo: 24px !importante;
+}
+
+.carrusel-deslizador {
+  alineación de texto: centro;
+}
+
+.carrusel-slider .splide__list {
+  relleno inferior: 100px! importante;
+}
+
+.carrusel-slider .imaged.w-100 {
+  ancho máximo: 400px;
+  margen izquierdo: automático;
+  margen derecho: automático;
+}
+
+.carrusel-slider .splide__pagination {
+  posición: fija;
+  ancho: 100%;
+  abajo: 120px;
+}
+
+.carrusel-slider .splide__botón de paginación {
+  fondo: #DCDCE9;
+  margen: 0 5px !importante;
+}
+
+.carrusel-slider .splide__pagination button.is-active {
+  fondo: #A9ABAD;
+  transformar: escala(1);
+}
+
+.carrusel-botón-pie de página {
+  altura mínima: 84px;
+  relleno-izquierda: 8px;
+  relleno derecho: 8px;
+  padding-bottom: env(safe-area-inset-bottom);
+  ancho: 100%;
+  posición: fija;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  índice z: 990;
+  izquierda: 0;
+  inferior: 0;
+  derecha: 0;
+}
+
+.carrusel-botón-pie de página > div {
+  ancho: 100%;
+}
+
+.form-button-group {
+  posición: fija;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  inferior: 0;
+  izquierda: 0;
+  derecha: 0;
+  ancho: 100%;
+  relleno: 0 16px;
+  fondo: #FFF;
+  altura mínima: 84px;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.form-button-group.transparent {
+  fondo: transparente !importante;
+}
+
+.form-enlaces {
+  pantalla: flexible;
+  alinear elementos: inicio flexible;
+  justificar-contenido: espacio-entre;
+  tamaño de fuente: 14px;
+}
+
+.línea de tiempo {
+  posición: relativa;
+  relleno: 24px 0;
+}
+
+.timeline:antes de {
+  contenido: '';
+  bloqueo de pantalla;
+  posición: absoluta;
+  ancho: 2px;
+  izquierda: 0;
+  inferior: 0;
+  superior: 0;
+  fondo: #DCDCE9;
+  índice z: 1;
+}
+
+.línea de tiempo .elemento {
+  posición: relativa;
+  margen inferior: 30px;
+}
+
+.timeline .item:último hijo {
+  margen inferior: 0;
+}
+
+.línea de tiempo .contenido {
+  relleno-izquierda: 20px;
+}
+
+.línea de tiempo .contenido .título {
+  margen inferior: 8px;
+  altura de línea: 1,3 em;
+}
+
+.línea de tiempo .contenido .texto {
+  tamaño de fuente: 13px;
+  altura de línea: 1,4 em;
+}
+
+.línea de tiempo .punto {
+  ancho: 12px;
+  altura: 12 píxeles;
+  borde-radio: 100%;
+  posición: absoluta;
+  fondo: #A9ABAD;
+  izquierda: -5px;
+  arriba: 4px;
+  índice z: 10;
+}
+
+.timeline.timed {
+  relleno-izquierda: 80px;
+}
+
+.timeline.timed:antes de {
+  izquierda: 80px;
+}
+
+.timeline.timed .tiempo {
+  tamaño de fuente: 11px;
+  posición: absoluta;
+  izquierda: -80px;
+  altura de línea: 1,5 em;
+  ancho: 70px;
+  alineación de texto: derecha;
+  arriba: 1px;
+  índice z: 20;
+}
+
+.caja de tostadas {
+  posición: fija;
+  izquierda: 0;
+  Top 100%;
+  derecha: 0;
+  ancho: 100%;
+  índice z: 600;
+  altura mínima: 52px;
+  margen-superior: env(área-segura-recuadro-superior);
+  transición: 0.2s todo;
+  fondo: rgba(0, 0, 0, 0,85);
+  tamaño de fuente: 13px;
+  color: rgba (255, 255, 255, 0,75);
+  relleno: 10px 16px;
+  altura de línea: 1,4 em;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+}
+
+.caja de tostadas .título de tostadas {
+  tamaño de fuente: 15px;
+  color: #fff;
+}
+
+.caja de tostadas .btn {
+  tamaño de fuente: 13px;
+  peso de fuente: 500;
+}
+
+.toast-box.mostrar {
+  superior: 0;
+}
+
+.caja de tostadas .en {
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: inicio flexible;
+  relleno derecho: 20px;
+}
+
+.toast-box .in i.icon,
+.toast-box .en icono de iones {
+  tamaño de fuente: 26px;
+  ancho: 32px;
+  altura: 32px;
+  margen derecho: 8px;
+  color: #fff;
+}
+
+.toast-box .in .text {
+  ancho: 100%;
+}
+
+.toast-box.toast-top.mostrar {
+  arriba: 56px;
+}
+
+.toast-box.toast-bottom {
+  arriba: automático;
+  inferior: -100%;
+}
+
+.toast-box.toast-bottom.mostrar {
+  abajo: 56px;
+  arriba: automático;
+  margen-inferior: env(área-segura-recuadro-inferior);
+}
+
+.toast-box.toast-centro {
+  ancho: automático;
+  izquierda: automático;
+  derecha: automático;
+  arriba: 50%;
+  izquierda: 50%;
+  transformar: traducir (-50%, -50%);
+  pantalla: ninguno;
+  relleno: 16px 24px;
+  borde-radio: 10px;
+  alineación de texto: centro;
+}
+
+.toast-box.toast-center.mostrar {
+  bloqueo de pantalla;
+  transformar: traducir (-50%, -50%);
+}
+
+.toast-box.toast-center .en {
+  relleno: 0;
+  bloqueo de pantalla;
+}
+
+.toast-box.toast-center .in i.icon,
+.toast-box.toast-center .en icono de iones {
+  pantalla: en línea-flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  margen: 0 0 10px 0;
+  tamaño de fuente: 56px;
+  ancho: 64px;
+  altura: 64px;
+}
+
+.toast-box.toast-center .btn {
+  margen superior: 20px;
+}
+
+.extra-header-active .toast-box.toast-top.show {
+  arriba: 95px;
+}
+
+.box-notificación {
+  posición: fija;
+  izquierda: 0;
+  Top 100%;
+  derecha: 0;
+  ancho: 100%;
+  índice z: 9999;
+  transición: 0.3s todo;
+  margen-superior: env(área-segura-recuadro-superior);
+}
+
+.notification-box.show {
+  superior: 0;
+}
+
+.notification-dialog.android-estilo {
+  fondo: #ffffff;
+  sombra de caja: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 11px 25px 0 rgba(0, 0, 0, 0.18);
+  relleno: 20px 16px 24px 16px;
+}
+
+.notification-dialog.android-style .notification-header {
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+}
+
+.notification-dialog.android-style .notification-header .in {
+  pantalla: flexible;
+  alinear elementos: centro;
+}
+
+.notification-dialog.android-style .notification-header .in .imaged {
+  margen derecho: 8px;
+}
+
+.notification-dialog.android-style .notification-header .in strong {
+  tamaño de fuente: 13px;
+  peso de fuente: 400;
+  color: #27173E;
+}
+
+.notification-dialog.android-style .notification-header .in span {
+  pantalla: en línea-flexible;
+  alinear elementos: centro;
+  margen izquierdo: 6px;
+  tamaño de fuente: 11px;
+}
+
+.notification-dialog.android-style .notification-header .in span:before {
+  pantalla: en línea-flexible;
+  alinear elementos: centro;
+  margen derecho: 6px;
+  contenido: "•";
+}
+
+.notification-dialog.android-style .notification-header .close-button {
+  pantalla: flexible;
+  ancho: 24px;
+  altura: 24px;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  tamaño de fuente: 20px;
+  color: #A9ABAD;
+}
+
+.notification-dialog.android-style .notification-header .close-button:hover, .notification-dialog.android-style .notification-header .close-button:active {
+  color: #958d9e;
+}
+
+.notification-dialog.android-style .notification-content {
+  tamaño de fuente: 13px;
+  altura de línea: 1,4 em;
+  margen superior: 14px;
+  pantalla: flexible;
+  alinear elementos: inicio flexible;
+  justificar-contenido: espacio-entre;
+}
+
+.notification-dialog.android-style .notification-content .subtitle {
+  tamaño de fuente: 15px;
+  margen: 0 0 5px 0;
+  altura de línea: 1,4 em;
+  peso de fuente: 500;
+}
+
+.notification-dialog.android-style .notification-content .in {
+  relleno derecho: 16px;
+}
+
+.notification-dialog.android-style .icon-box {
+  ancho: 46px;
+  altura: 46px;
+  tamaño de fuente: 46px;
+  color: #A9ABAD;
+}
+
+.notification-dialog.android-style .notification-footer {
+  borde superior: 1px sólido #DCDCE9;
+  margen: 16px -16px -24px -16px;
+  relleno: 0;
+  pantalla: flexible;
+  alinear elementos: inicio flexible;
+}
+
+.notification-dialog.android-style .notification-footer .notification-button {
+  flexión: 1;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  color: #6236FF !importante;
+  tamaño de fuente: 13px;
+  borde derecho: 1px sólido #DCDCE9;
+  relleno: 16px 6px;
+}
+
+.notification-dialog.android-style .notification-footer .notification-button ion-icon,
+.notification-dialog.android-style .notification-footer .notification-button .icon {
+  tamaño de fuente: 20px;
+  altura de línea: 1em;
+  margen derecho: 8px;
+}
+
+.notification-dialog.android-style .notification-footer .notification-button:last-child {
+  borde derecho: 0;
+}
+
+.notification-dialog.android-style .notification-footer .notification-button:hover, .notification-dialog.android-style .notification-footer .notification-button:active {
+  color: #4e1dff;
+  fondo: rgba(220, 220, 233, 0.3);
+}
+
+.notificación-diálogo.ios-estilo {
+  margen: 10px;
+  fondo: #3b4859;
+  relleno: 0;
+  borde-radio: 10px;
+  sombra de caja: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+}
+
+.notification-dialog.ios-style .notification-header {
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+  relleno: 10px;
+  fondo: rgba(0, 0, 0, 0.1);
+  borde-radio: 10px 10px 0 0;
+}
+
+.notification-dialog.ios-style .notification-header .in {
+  pantalla: flexible;
+  alinear elementos: centro;
+}
+
+.notification-dialog.ios-style .notification-header .in .imaged {
+  margen derecho: 8px;
+}
+
+.notification-dialog.ios-style .notification-header .in strong {
+  tamaño de fuente: 13px;
+  peso de fuente: 400;
+  color: #fff;
+}
+
+.notification-dialog.ios-style .notification-header .right {
+  pantalla: flexible;
+  alinear elementos: centro;
+}
+
+.notification-dialog.ios-style .notification-header .right span {
+  pantalla: en línea-flexible;
+  alinear elementos: centro;
+  margen derecho: 6px;
+  color: rgba (255, 255, 255, 0,5);
+  tamaño de fuente: 11px;
+}
+
+.notification-dialog.ios-style .notification-header .close-button {
+  pantalla: flexible;
+  ancho: 24px;
+  altura: 24px;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  tamaño de fuente: 20px;
+  color: #fff;
+  opacidad: 0,5;
+}
+
+.notification-dialog.ios-style .notification-header .close-button:hover, .notification-dialog.ios-style .notification-header .close-button:active {
+  opacidad: 0,7;
+}
+
+.notification-dialog.ios-style .icon-box {
+  ancho: 46px;
+  altura: 46px;
+  tamaño de fuente: 46px;
+  color: #A9ABAD;
+}
+
+.notificación-diálogo.ios-estilo .notificación-contenido {
+  tamaño de fuente: 13px;
+  altura de línea: 1,4 em;
+  relleno: 14px 16px 20px 16px;
+  pantalla: flexible;
+  alinear elementos: inicio flexible;
+  justificar-contenido: espacio-entre;
+  color: rgba (255, 255, 255, 0,75);
+}
+
+.notification-dialog.ios-style .notification-content .subtitle {
+  tamaño de fuente: 15px;
+  margen: 0 0 5px 0;
+  altura de línea: 1,4 em;
+  color: #fff;
+  peso de fuente: 500;
+}
+
+.notification-dialog.ios-style .notification-content .in {
+  relleno derecho: 16px;
+}
+
+.notificación-diálogo.ios-estilo .notificación-pie de página {
+  borde superior: 1px sólido rgba (255, 255, 255, 0.1);
+  margen: 0px -16px -16px -16px;
+  relleno: 0;
+  pantalla: flexible;
+  alinear elementos: inicio flexible;
+}
+
+.notification-dialog.ios-style .notification-footer .notification-button {
+  color: #fff !importante;
+  flexión: 1;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  tamaño de fuente: 13px;
+  borde derecho: 1px sólido rgba (255, 255, 255, 0.1);
+  relleno: 15px 6px;
+}
+
+.notification-dialog.ios-style .notification-footer .notification-button ion-icon {
+  tamaño de fuente: 20px;
+  altura de línea: 1em;
+  margen derecho: 10px;
+  color: #fff;
+}
+
+.notification-dialog.ios-style .notification-footer .notification-button:last-child {
+  borde derecho: 0;
+}
+
+.notification-dialog.ios-style .notification-footer .notification-button:hover, .notification-dialog.ios-style .notification-footer .notification-button:active {
+  color: #4e1dff;
+  fondo: rgba(255, 255, 255, 0.02);
+}
+
+.ios-add-to-home .modal-header {
+  border-bottom-color: transparente !importante;
+}
+
+.ios-add-to-home .modal-content {
+  posición: relativa;
+  margen inferior: 10px;
+  índice z: 1;
+  box-shadow: 0 10px 20px -4px rgba(0, 0, 0, 0.2) !importante;
+}
+
+.ios-add-to-home .modal-content:before {
+  contenido: "";
+  bloqueo de pantalla;
+  ancho: 0;
+  altura: 0;
+  borde izquierdo: 14px sólido transparente;
+  borde derecho: 14px sólido transparente;
+  borde superior: 10px sólido #fff;
+  posición: absoluta;
+  abajo: -7px;
+  índice z: 10;
+  izquierda: 50%;
+  margen izquierdo: -16px;
+}
+
+.ios-add-to-home .modal-content .action-sheet-content {
+  tamaño de fuente: 13px;
+  color: #27173E;
+  altura de línea: 1,5 em;
+}
+
+.ios-add-to-home .modal-content .action-sheet-content h4 {
+  tamaño de fuente: 15px;
+  margen inferior: 10px;
+}
+
+.ios-add-to-home .modal-content .action-sheet-content i.bi,
+.ios-add-to-home .modal-content .action-sheet-content i.icon,
+.ios-add-to-home .modal-content .action-sheet-content ion-icon {
+  tamaño de fuente: 22px;
+  margen inferior: -4px;
+}
+
+.android-añadir-a-casa {
+  índice z: 200000;
+}
+
+.android-add-to-home .modal-header {
+  border-bottom-color: transparente !importante;
+}
+
+.android-add-to-home .modal-diálogo {
+  margin-top: env(safe-area-inset-top) !important;
+  superior: 0;
+  abajo: automático;
+  relleno: 6px !importante;
+  transformar: traducir (0, -100%) !importante;
+  transición: .5s todo !importante;
+}
+
+.android-add-to-home.show .modal-diálogo {
+  transformar: traducir (0, 0)! importante;
+  arriba: 10px;
+}
+
+.android-add-to-home .modal-content {
+  posición: relativa;
+  índice z: 1;
+  borde-radio: 8px !importante;
+  box-shadow: 0 10px 20px -4px rgba(0, 0, 0, 0.2) !importante;
+}
+
+.android-add-to-home .modal-content:before {
+  contenido: "";
+  bloqueo de pantalla;
+  ancho: 0;
+  altura: 0;
+  borde izquierdo: 10px sólido transparente;
+  borde derecho: 10px sólido transparente;
+  borde superior: 10px sólido #fff;
+  posición: absoluta;
+  arriba: -8px;
+  índice z: 10;
+  derecha: 8px;
+  transformar: rotar (180 grados);
+  margen izquierdo: -16px;
+}
+
+.android-add-to-home .modal-content .action-sheet-content {
+  tamaño de fuente: 13px;
+  color: #27173E;
+  altura de línea: 1,6 em;
+  acolchado superior: 16px !importante;
+}
+
+.android-add-to-home .modal-content .action-sheet-content i.bi,
+.android-add-to-home .modal-content .action-sheet-content i.icon,
+.android-add-to-home .modal-content .action-sheet-content ion-icon {
+  tamaño de fuente: 18px;
+  margen inferior: -5px;
+}
+
+.encabezado de la sección {
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+  margen inferior: 16px;
+}
+
+.section-heading.padding {
+  relleno-izquierda: 16px;
+  relleno derecho: 16px;
+}
+
+.sección-título .título {
+  margen: 0;
+  tamaño de fuente: 20px;
+  espaciado entre letras: -0.01em;
+  altura de línea: 1em;
+  relleno derecho: 16px;
+}
+
+.sección-título .enlace {
+  color: rgba (98, 54, 255, 0,5);
+  tamaño de fuente: 13px;
+  peso de fuente: 500;
+}
+
+.wallet-card-section {
+  posición: relativa;
+}
+
+.wallet-card-section:before {
+  posición: absoluta;
+  izquierda: 0;
+  derecha: 0;
+  superior: 0;
+  contenido: "";
+  bloqueo de pantalla;
+  altura: 140px;
+  fondo: #6236FF;
+}
+
+.tarjeta de cartera {
+  fondo: #ffffff;
+  sombra de caja: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+  borde-radio: 10px;
+  relleno: 20px 24px;
+  posición: relativa;
+  índice z: 1;
+}
+
+.billetera-tarjeta .saldo {
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+  margen inferior: 10px;
+  altura: 100px;
+}
+
+.billetera-tarjeta .saldo .izquierda {
+  relleno derecho: 10px;
+}
+
+.billetera-tarjeta .saldo .right {
+  relleno: 0;
+}
+
+.billetera-tarjeta .saldo .derecho .botón {
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  altura de línea: 1em;
+  color: #6236FF;
+  fondo: rgba(98, 54, 255, 0.1);
+  ancho: 50px;
+  altura: 64px;
+  tamaño de fuente: 26px;
+  borde-radio: 10px;
+}
+
+.billetera-tarjeta .saldo .derecho .botón: pasar el cursor {
+  fondo: #6236FF !importante;
+  color: #fff !importante;
+}
+
+.cartera-tarjeta .saldo .título {
+  color: #27173E;
+  peso de fuente: 500;
+  bloqueo de pantalla;
+  margen inferior: 8px;
+}
+
+.billetera-tarjeta .saldo .total {
+  peso de fuente: 700;
+  espaciado entre letras: -0.01em;
+  altura de línea: 1em;
+  tamaño de fuente: 32px;
+}
+
+.billetera-tarjeta .billetera-pie de página {
+  borde superior: 1px sólido #DCDCE9;
+  acolchado superior: 20px;
+  pantalla: flexible;
+  alinear elementos: inicio flexible;
+  justificar-contenido: espacio-entre;
+}
+
+.wallet-card .wallet-footer .item {
+  flexión: 1;
+  alineación de texto: centro;
+}
+
+.wallet-card .wallet-footer .item a {
+  bloqueo de pantalla;
+}
+
+.wallet-card .wallet-footer .item a:activo {
+  transformar: escala (0.94);
+}
+
+.wallet-card .wallet-footer .item .icon-wrapper {
+  fondo: #6236FF;
+  ancho: 48px;
+  altura: 48px;
+  pantalla: en línea-flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  borde-radio: 10px;
+  color: #fff;
+  tamaño de fuente: 24px;
+  margen inferior: 14px;
+}
+
+.wallet-card .wallet-footer .item fuerte {
+  bloqueo de pantalla;
+  color: #27173E;
+  peso de fuente: 500;
+  tamaño de fuente: 11px;
+  altura de línea: 1,2 em;
+}
+
+.stat-caja {
+  fondo: #ffffff;
+  sombra de caja: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+  borde-radio: 10px;
+  relleno: 20px 24px;
+}
+
+.stat-box .título {
+  tamaño de fuente: 13px;
+  color: #958d9e;
+  peso de fuente: 500;
+  bloqueo de pantalla;
+  margen inferior: 8px;
+  altura de línea: 1,4 em;
+}
+
+.stat-box .valor {
+  tamaño de fuente: 24px;
+  peso de fuente: 700;
+  espaciado entre letras: -0.02em;
+  altura de línea: 1em;
+  color: #27173E;
+}
+
+.transacciones .elemento {
+  fondo: #ffffff;
+  sombra de caja: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+  borde-radio: 10px;
+  relleno: 20px 24px;
+  margen inferior: 10px;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+}
+
+.transacciones .item:último hijo {
+  margen inferior: 0;
+}
+
+.transacciones .elemento p {
+  tamaño de fuente: 11px;
+  margen: 0;
+  color: #958d9e;
+  peso de fuente: 500;
+}
+
+.transacciones .elemento .detalle {
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: inicio flexible;
+  altura de línea: 1,2 em;
+}
+
+.transacciones .elemento .detalle .imagen-bloque {
+  margen derecho: 16px;
+}
+
+.transacciones .elemento .detalle fuerte {
+  bloqueo de pantalla;
+  peso de fuente: 500;
+  color: #27173E;
+  margen inferior: 3px;
+}
+
+.transacciones .elemento .derecho {
+  relleno-izquierda: 10px;
+}
+
+.transacciones .artículo .derecho .precio {
+  peso de fuente: 700;
+  color: #27173E;
+  espaciado entre letras: -0.03em;
+}
+
+.shadowfix .owl-stage {
+  relleno inferior: 0px;
+}
+
+.caja de facturas {
+  fondo: #ffffff;
+  sombra de caja: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+  borde-radio: 10px;
+  relleno: 20px 24px;
+  alineación de texto: centro;
+}
+
+.bill-box .img-envoltorio {
+  alineación de texto: centro;
+  margen inferior: 16px;
+}
+
+.bill-box .img-envoltorio img {
+  margen: automático;
+}
+
+.bill-box .img-envoltorio .iconbox {
+  ancho: 48px;
+  altura: 48px;
+  fondo: #6236FF;
+  borde-radio: 10px;
+  altura de línea: 1em;
+  color: #fff;
+  tamaño de fuente: 24px;
+  pantalla: en línea-flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+}
+
+.bill-box .precio {
+  tamaño de fuente: 20px;
+  peso de fuente: 700;
+  color: #27173E;
+  espaciado entre letras: -0.02em;
+  altura de línea: 1em;
+  margen inferior: 12px;
+}
+
+.caja de facturas p {
+  tamaño de fuente: 11px;
+  altura de línea: 1,4 em;
+  altura: 36px;
+  margen: 0 0 10px 0;
+}
+
+.objetivos .elemento {
+  relleno: 20px 24px;
+  fondo: #ffffff;
+  sombra de caja: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+  borde-radio: 10px;
+  margen inferior: 10px;
+}
+
+.objetivos .item:último hijo {
+  margen inferior: 0;
+}
+
+.objetivos .elemento .en {
+  pantalla: flexible;
+  alinear elementos: inicio flexible;
+  justificar-contenido: espacio-entre;
+  margen inferior: 6px;
+}
+
+.objetivos .elemento h4 {
+  margen: 0;
+  tamaño de fuente: 15px;
+  peso de fuente: 500;
+}
+
+.objetivos .elemento p {
+  margen: 0;
+  tamaño de fuente: 11px;
+}
+
+.objetivos .elemento .precio {
+  peso de fuente: 700;
+  color: #27173E;
+}
+
+.tarjeta-usuario {
+  fondo: #ffffff;
+  sombra de caja: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+  bloqueo de pantalla;
+  relleno: 10px;
+  alineación de texto: centro;
+  borde-radio: 10px;
+}
+
+.usuario-tarjeta fuerte {
+  bloqueo de pantalla;
+  tamaño de fuente: 11px;
+  color: #27173E;
+  altura de línea: 1,3 em;
+  margen superior: 8px;
+}
+
+.blog-tarjeta {
+  relleno: 0;
+  fondo: #ffffff;
+  borde-radio: 10px;
+  sombra de caja: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+}
+
+.blog-tarjeta img {
+  borde-radio: 10px 10px 0 0;
+}
+
+.blog-tarjeta .texto {
+  relleno: 12px 16px;
+}
+
+.blog-tarjeta .título {
+  margen: 0;
+  tamaño de fuente: 15px;
+  peso de fuente: 500;
+  altura de línea: 1,4 em;
+  altura: 67px;
+  desbordamiento: oculto;
+}
+
+.blog-tarjeta pequeña {
+  tamaño de fuente: 11px;
+  color: #A9ABAD;
+  margen: 0;
+  altura de línea: 1,2 em;
+}
+
+.listed-detail .icon-wrapper {
+  alineación de texto: centro;
+}
+
+.detalle listado .iconbox {
+  ancho: 64px;
+  altura: 64px;
+  borde-radio: 100%;
+  pantalla: en línea-flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  fondo: #6236FF;
+  tamaño de fuente: 26px;
+  color: #fff;
+}
+
+.splash-page {
+  alineación de texto: centro;
+}
+
+.splash-page .iconbox {
+  ancho: 72px;
+  altura: 72px;
+  fondo: #6236FF;
+  borde-radio: 100%;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  tamaño de fuente: 32px;
+  color: #fff;
+  margen: automático;
+}
+
+.barra fija {
+  posición: fija;
+  inferior: 0;
+  izquierda: 0;
+  derecha: 0;
+  relleno: 0 16px;
+  fondo: #fff;
+  altura mínima: 84px;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.barra-fija > div {
+  flexión: 1;
+}
+
+.blog-header-info {
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+  relleno: 0 0;
+  tamaño de fuente: 13px;
+}
+
+.blog-header-info img {
+  relleno: 0;
+  margen: 0;
+}
+
+.avatar-sección {
+  alineación de texto: centro;
+  posición: relativa;
+  pantalla: en línea-flexible;
+}
+
+.avatar-sección .imagen {
+  borde: 5px sólido #fff;
+  sombra de caja: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+}
+
+.avatar-sección .button {
+  fondo: #6236FF;
+  color: #fff;
+  ancho: 32px;
+  altura: 32px;
+  borde-radio: 100%;
+  pantalla: en línea-flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  tamaño de fuente: 20px;
+  posición: absoluta;
+  derecha: 0;
+  inferior: 0;
+}
+
+.tarjeta-bloque {
+  altura: 220px;
+  fondo: #6236FF;
+  borde-radio: 10px;
+  sombra de caja: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+  color: #fff;
+  posición: relativa;
+}
+
+.tarjeta-bloque .tarjeta-principal {
+  imagen de fondo: gradiente lineal (-180 grados, rgba (0, 0, 0, 0) 0%, rgba (0, 0, 0, 0,23) 100%);
+  posición: absoluta;
+  borde-radio: 10px;
+  izquierda: 0;
+  derecha: 0;
+  inferior: 0;
+  superior: 0;
+  pantalla: flexible;
+  alinear elementos: extremo flexible;
+  relleno: 20px 24px;
+}
+
+.tarjeta-bloque .tarjeta-botón {
+  posición: absoluta;
+  derecha: 10px;
+  arriba: 10px;
+}
+
+.card-block .card-button > .btn {
+  fondo: transparente !importante;
+  color: #fff !importante;
+}
+
+.card-block span.label {
+  tamaño de fuente: 11px;
+  espaciado entre letras: 1px;
+  opacidad: 0,5;
+  altura de línea: 1em;
+  margen inferior: 5px;
+  transformación de texto: mayúsculas;
+  bloqueo de pantalla;
+  peso de fuente: 500;
+}
+
+.card-block .in .card-number {
+  tamaño de fuente: 17px;
+  espaciado entre letras: 3px;
+  peso de fuente: 500;
+}
+
+.card-block .in .card-expiry {
+  tamaño de fuente: 14px;
+  peso de fuente: 500;
+  margen derecho: 20px;
+}
+
+.tarjeta-bloque .in .tarjeta-ccv {
+  peso de fuente: 500;
+  tamaño de fuente: 14px;
+}
+
+.tarjeta-bloque .bottom {
+  pantalla: flexible;
+  alinear elementos: centro;
+  margen superior: 20px;
+}
+
+.tarjeta-bloque .saldo {
+  posición: absoluta;
+  izquierda: 24px;
+  arriba: 24px;
+}
+
+.tarjeta-bloque .saldo .título {
+  peso de fuente: 700;
+  color: #fff;
+  margen superior: 7px;
+  tamaño de fuente: 24px;
+}
+
+.transfer-verification {
+  relleno: 0 10px;
+}
+
+.transfer-verification .from-to-block {
+  pantalla: flexible;
+  alinear elementos: inicio flexible;
+  justificar-contenido: espacio-entre;
+  posición: relativa;
+}
+
+.transfer-verification .from-to-block .item {
+  posición: relativa;
+  índice z: 2;
+}
+
+.transfer-verification .from-to-block .item strong {
+  altura de línea: 1,3 em;
+  margen superior: 8px;
+  bloqueo de pantalla;
+  color: #958d9e;
+  peso de fuente: 500;
+  tamaño de fuente: 11px;
+}
+
+.transfer-verification .from-to-block .arrow {
+  posición: absoluta;
+  izquierda: 72px;
+  derecha: 72px;
+  arriba: 24px;
+  índice z: 1;
+  fondo: #DCDCE9;
+  altura: 2px;
+}
+
+.transfer-verification .from-to-block .arrow:después de {
+  contenido: "";
+  borde: sólido #DCDCE9;
+  ancho del borde: 0 2px 2px 0;
+  pantalla: bloque en línea;
+  relleno: 6px;
+  transformar: rotar (-45 grados);
+  -transformación de webkit: rotar (-45 grados);
+  posición: absoluta;
+  arriba: -6px;
+  derecha: 0;
+}
+
+.transfer-verification .transfer-amount {
+  margen inferior: -16px;
+}
+
+.transfer-verification .transfer-amount .caption {
+  tamaño de fuente: 11px;
+  color: #27173E;
+  altura de línea: 1,2 em;
+}
+
+.gradientSection {
+  posición: relativa;
+  alineación de texto: centro;
+  fondo: #6236FF;
+  imagen de fondo: degradado lineal (-208 grados, #6236FF 38 %, #8a69ff 100 %);
+}
+
+.gradientSection .in {
+  posición: relativa;
+  índice z: 10;
+  relleno: 50px 16px 40px 16px;
+}
+
+.gradientSection .título {
+  tamaño de fuente: 13px;
+  color: #fff;
+  opacidad: 0,6;
+}
+
+.gradientSection .total {
+  espaciado entre letras: -0.01em;
+  color: #fff;
+  tamaño de fuente: 32px;
+}
+
+.gradientSection .caption {
+  color: #fff;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+}
+
+.gradientSection .caption .iconbox {
+  tamaño de fuente: 20px;
+  margen: 0 8px -2px 8px;
+}
+
+.gradientSection .caption fuerte {
+  opacidad: 0,4;
+  margen izquierdo: 10px;
+}
+
+.gradientSection .chart {
+  posición: absoluta;
+  izquierda: 0;
+  inferior: 0;
+  derecha: 0;
+  opacidad: 0,1;
+  índice z: 1;
+}
+
+.wallet-inline-button {
+  pantalla: flexible;
+  alinear elementos: inicio flexible;
+  justificar contenido: espacio alrededor;
+  alineación de texto: centro;
+  relleno: 0;
+  borde-radio: 10px;
+}
+
+.wallet-inline-button .item {
+  color: #fff;
+  tamaño de fuente: 11px;
+}
+
+.wallet-inline-button .item fuerte {
+  opacidad: 0,6;
+  bloqueo de pantalla;
+  margen superior: 3px;
+}
+
+.wallet-inline-button .item:activo {
+  transformar: escala (0.94);
+}
+
+.wallet-inline-button .iconbox {
+  pantalla: en línea-flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  fondo: rgba(0, 0, 0, 0.4);
+  ancho: 48px;
+  altura: 48px;
+  tamaño de fuente: 24px;
+  borde-radio: 100px;
+}
+
+.lista detallada li {
+  acolchado superior: 3px;
+  relleno inferior: 3px;
+  altura de línea: 1,5 em;
+}
+
+.lista-detallada li > un.elemento {
+  relleno derecho: 16px;
+  border-radius: 0 !importante;
+}
+
+.detailed-list li > a.item:después {
+  pantalla: ninguno !importante;
+}
+
+.lista-detallada .texto-pequeño {
+  tamaño de fuente: 11px !importante;
+}
+
+.lista-detallada .insignia {
+  tamaño de fuente: 11px;
+  relleno: 3px 7px;
+  altura de línea: 1,2 em;
+  altura: automático;
+  borde: 0;
+}
+
+.lista-detallada .insignia icono de iones,
+.lista-detallada .insignia .icono {
+  margen derecho: 3px;
+}
+
+.tarjeta-con-icono {
+  altura de línea: 1,2 em;
+}
+
+.tarjeta-con-icono .tarjeta-icono {
+  pantalla: en línea-flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  ancho: 64px;
+  altura: 64px;
+  borde-radio: 100px;
+  fondo: #6236FF;
+  tamaño de fuente: 32px;
+  color: #fff;
+}
+
+.tarjeta-con-icono p {
+  tamaño de fuente: 13px;
+}
+
+.caja de monedas {
+  desbordamiento: oculto;
+}
+
+.coinbox .tarjeta-cuerpo {
+  relleno: 20px;
+}
+
+.coinbox .insignia {
+  tamaño de fuente: 11px;
+  relleno: 3px 7px;
+  altura de línea: 1,2 em;
+  altura: automático;
+  borde: 0;
+}
+
+.coinbox .badge ion-icono,
+.caja de monedas .insignia .icono {
+  margen derecho: 3px;
+}
+
+.monedero h4 {
+  tamaño de fuente: 13px;
+  color: #A9ABAD;
+  margen: 0 0 10px 0;
+}
+
+.coinbox .texto {
+  color: #27173E;
+  peso de fuente: 500;
+  margen inferior: 6px;
+}
+
+.coinbox .text fuerte {
+  peso de fuente: 400;
+}
+
+.coinbox .fixed-button {
+  posición: absoluta;
+  derecha: 5px;
+  arriba: 7px;
+  ancho: 40px;
+  altura: 40px;
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  color: #A9ABAD;
+  tamaño de fuente: 18px;
+  transición: 0.2s todo;
+}
+
+.coinbox .fixed-button:hover {
+  color: #958d9e;
+}
+
+.coin-head {
+  padding-bottom: 130px !importante;
+}
+
+.coin-chart {
+  margen superior: -100px;
+  posición: relativa;
+  índice z: 100;
+}
+
+.intercambio-grupo {
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+  margen: 0px -8px;
+}
+
+.exchange-group .input-col {
+  relleno: 0 8px;
+  ancho: 100% !importante;
+}
+
+.exchange-group .select-col {
+  relleno: 0 8px;
+}
+
+.entrada de grupo de intercambio {
+  peso de fuente: 700;
+  tamaño de fuente: 28px !importante;
+}
+
+.exchange-group .form-control-lg,
+.exchange-group .form-select-lg {
+  altura mínima: 50px;
+}
+
+.exchange-group .form-select {
+  cursor: puntero;
+  ancho: automático;
+  pantalla: bloque en línea;
+  peso de fuente: 700;
+  color: #27173E;
+  relleno derecho: 24px;
+  imagen de fondo: url("datos:imagen/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none ' stroke='%23958D9F' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  posición de fondo: derecha 0,1 rem centro;
+}
+
+.exchange-group .form-select:focus {
+  box-shadow: ninguno !importante;
+}
+
+.exchange-group.small .form-control {
+  tamaño de fuente: 20px !importante;
+}
+
+.exchange-heading {
+  pantalla: flexible;
+  alinear elementos: centro;
+  justificar-contenido: espacio-entre;
+}
+
+.exchange-heading .group-label {
+  color: #27173E;
+  peso de fuente: 500;
+  tamaño de fuente: 11px;
+}
+
+.exchange-heading .exchange-wallet-info {
+  tamaño de fuente: 11px;
+  color: #A9ABAD;
+  alineación de texto: derecha;
+}
+
+.exchange-heading .exchange-wallet-info fuerte {
+  peso de fuente: 700;
+}
+
+.línea de intercambio {
+  posición: relativa;
+  alineación de texto: centro;
+  relleno: 10px 0;
+}
+
+.exchange-line:después de {
+  contenido: "";
+  bloqueo de pantalla;
+  ancho: 1px;
+  fondo: #ccccdf;
+  posición: absoluta;
+  superior: 0;
+  inferior: 0;
+  izquierda: 50%;
+}
+
+.intercambio-icono {
+  ancho: 30px;
+  altura: 30px;
+  borde-radio: 200px;
+  tamaño de fuente: 18px;
+  pantalla: en línea-flexible;
+  alinear elementos: centro;
+  justificar-contenido: centro;
+  posición: relativa;
+  índice z: 999;
+  color: #fff;
+  fondo: #ccccdf;
+}
+
+html[dir="rtl"],
+cuerpo.rtl-modo {
+  dirección: rtl;
+}
+
+html[dir="rtl"] .ms-0,
+cuerpo.rtl-modo .ms-0 {
+  margen izquierdo: 0 !importante;
+  margen derecho: 0 !importante;
+}
+
+html[dir="rtl"] .ms-05,
+cuerpo.rtl-modo .ms-05 {
+  margen izquierdo: 0 !importante;
+  margen derecho: 5px !importante;
+}
+
+html[dir="rtl"] .ms-1,
+cuerpo.rtl-modo .ms-1 {
+  margen izquierdo: 0 !importante;
+  margen derecho: 8px !importante;
+}
+
+html[dir="rtl"] .ms-2,
+cuerpo.rtl-modo .ms-2 {
+  margen izquierdo: 0 !importante;
+  margen derecho: 16px !importante;
+}
+
+html[dir="rtl"] .ms-3,
+cuerpo.rtl-modo .ms-3 {
+  margen izquierdo: 0 !importante;
+  margen derecho: 24px !importante;
+}
+
+html[dir="rtl"] .ms-4,
+cuerpo.rtl-modo .ms-4 {
+  margen izquierdo: 0 !importante;
+  margen derecho: 32px !importante;
+}
+
+html[dir="rtl"] .ms-5,
+cuerpo.rtl-modo .ms-5 {
+  margen izquierdo: 0 !importante;
+  margen derecho: 40px !importante;
+}
+
+html[dir="rtl"] .me-0,
+cuerpo.rtl-modo .me-0 {
+  margen derecho: 0 !importante;
+  margen izquierdo: 0px !importante;
+}
+
+html[dir="rtl"] .me-05,
+cuerpo.rtl-modo .me-05 {
+  margen derecho: 0 !importante;
+  margen izquierdo: 5px !importante;
+}
+
+html[dir="rtl"] .me-1,
+cuerpo.rtl-modo .me-1 {
+  margen derecho: 0 !importante;
+  margen izquierdo: 8px !importante;
+}
+
+html[dir="rtl"] .me-2,
+cuerpo.rtl-modo .me-2 {
+  margen derecho: 0 !importante;
+  margen izquierdo: 16px !importante;
+}
+
+html[dir="rtl"] .me-3,
+cuerpo.rtl-modo .me-3 {
+  margen derecho: 0 !importante;
+  margen izquierdo: 24px !importante;
+}
+
+html[dir="rtl"] .me-4,
+cuerpo.rtl-modo .me-4 {
+  margen derecho: 0 !importante;
+  margen izquierdo: 32px !importante;
+}
+
+html[dir="rtl"] .me-5,
+cuerpo.rtl-modo .me-5 {
+  margen derecho: 0 !importante;
+  margen izquierdo: 40px !importante;
+}
+
+html[dir="rtl"] .ps-0,
+cuerpo.rtl-modo .ps-0 {
+  relleno-izquierda: 0px !importante;
+  relleno derecho: 0px !importante;
+}
+
+html[dir="rtl"] .ps-05,
+cuerpo.rtl-modo .ps-05 {
+  relleno-izquierda: 0px !importante;
+  relleno derecho: 5px! importante;
+}
+
+html[dir="rtl"] .ps-1,
+cuerpo.rtl-modo .ps-1 {
+  relleno-izquierda: 0px !importante;
+  relleno derecho: 8px! importante;
+}
+
+html[dir="rtl"] .ps-2,
+cuerpo.rtl-modo .ps-2 {
+  relleno-izquierda: 0px !importante;
+  relleno derecho: 16px! importante;
+}
+
+html[dir="rtl"] .ps-3,
+cuerpo.rtl-modo .ps-3 {
+  relleno-izquierda: 0px !importante;
+  relleno derecho: 24px! importante;
+}
+
+html[dir="rtl"] .ps-4,
+cuerpo.rtl-modo .ps-4 {
+  relleno-izquierda: 0px !importante;
+  relleno derecho: 32px! importante;
+}
+
+html[dir="rtl"] .ps-5,
+cuerpo.rtl-modo .ps-5 {
+  relleno-izquierda: 0px !importante;
+  relleno derecho: 40px! importante;
+}
+
+html[dir="rtl"] .pe-0,
+cuerpo.rtl-modo .pe-0 {
+  relleno derecho: 0px !importante;
+  relleno-izquierda: 0px !importante;
+}
+
+html[dir="rtl"] .pe-05,
+cuerpo.rtl-modo .pe-05 {
+  relleno derecho: 0px !importante;
+  relleno-izquierda: 5px !importante;
+}
+
+html[dir="rtl"] .pe-1,
+cuerpo.rtl-modo .pe-1 {
+  relleno derecho: 0px !importante;
+  relleno-izquierda: 8px !importante;
+}
+
+html[dir="rtl"] .pe-2,
+cuerpo.rtl-modo .pe-2 {
+  relleno derecho: 0px !importante;
+  relleno-izquierda: 16px !importante;
+}
+
+html[dir="rtl"] .pe-3,
+cuerpo.rtl-modo .pe-3 {
+  relleno derecho: 0px !importante;
+  relleno-izquierda: 24px !importante;
+}
+
+html[dir="rtl"] .pe-4,
+cuerpo.rtl-modo .pe-4 {
+  relleno derecho: 0px !importante;
+  relleno-izquierda: 32px !importante;
+}
+
+html[dir="rtl"] .pe-5,
+cuerpo.rtl-modo .pe-5 {
+  relleno derecho: 0px !importante;
+  relleno-izquierda: 40px !importante;
+}
+
+html[dir="rtl"] .appHeader .izquierda,
+cuerpo.rtl-mode .appHeader .left {
+  derecha: 10px;
+  izquierda: automático;
+}
+
+html[dir="rtl"] .appHeader .derecho,
+cuerpo.rtl-mode .appHeader .right {
+  derecha: automático;
+  izquierda: 10px;
+}
+
+html[dir="rtl"] .link-listview > li a,
+html[dir="rtl"] .image-listview > li a,
+body.rtl-mode .link-listview > li a,
+body.rtl-mode .image-listview > li a {
+  relleno: 11px 16px 11px 36px;
+}
+
+html[dir="rtl"] .link-listview > li a:después,
+html[dir="rtl"] .image-listview > li a:después,
+body.rtl-mode .link-listview > li a:después,
+body.rtl-mode .image-listview > li a:después {
+  derecha: automático;
+  izquierda: 16px;
+  transformar: rotar (180 grados);
+}
+
+html[dir="rtl"] .link-listview.text > li:después,
+html[dir="rtl"] .image-listview.text > li:después,
+body.rtl-mode .link-listview.text > li:después,
+body.rtl-mode .image-listview.text > li:después {
+  izquierda: 0;
+  derecha: 16px;
+}
+
+html[dir="rtl"] .link-listview.media > li .imageWrapper,
+html[dir="rtl"] .image-listview.media > li .imageWrapper,
+body.rtl-mode .link-listview.media > li .imageWrapper,
+body.rtl-mode .image-listview.media > li .imageWrapper {
+  margen derecho: 0;
+  margen izquierdo: 16px;
+}
+
+html[dir="rtl"] .image-listview > li:después,
+body.rtl-mode .image-listview > li:después {
+  izquierda: 0;
+  derecha: 68px;
+}
+
+html[dir="rtl"] .image-listview > li .item .imagen,
+html[dir="rtl"] .image-listview > li .item .icon-box,
+body.rtl-mode .image-listview > li .item .image,
+body.rtl-mode .image-listview > li .item .icon-box {
+  margen derecho: 0;
+  margen izquierdo: 16px;
+}
+
+html[dir="rtl"] .acordeón .acordeón-encabezado .btn,
+html[dir="rtl"] .acordeón .acordeón-encabezado .acordeón-botón,
+cuerpo.rtl-modo .accordion .accordion-header .btn,
+body.rtl-mode .accordion .accordion-header .accordion-button {
+  relleno: 8px 16px 8px 50px;
+}
+
+html[dir="rtl"] .accordion .accordion-header .btn:después,
+html[dir="rtl"] .accordion .accordion-header .accordion-button:después,
+body.rtl-mode .accordion .accordion-header .btn:después,
+body.rtl-mode .accordion .accordion-header .accordion-button:después {
+  izquierda: 10px;
+  derecha: automático;
+}
+
+html[dir="rtl"] .acordeón .acordeón-cabecera .btn i.bi,
+html[dir="rtl"] .accordion .accordion-header .btn i.icon,
+html[dir="rtl"] .accordion .accordion-header .btn icono de iones,
+html[dir="rtl"] .accordion .accordion-header .accordion-button i.bi,
+html[dir="rtl"] .accordion .accordion-header .accordion-button i.icon,
+html[dir="rtl"] .accordion .accordion-header .accordion-button ion-icon,
+body.rtl-mode .accordion .accordion-header .btn i.bi,
+body.rtl-mode .accordion .accordion-header .btn i.icon,
+body.rtl-mode .accordion .accordion-header .btn ion-icon,
+body.rtl-mode .accordion .accordion-header .accordion-button i.bi,
+body.rtl-mode .accordion .accordion-header .accordion-button i.icon,
+body.rtl-mode .accordion .accordion-header .accordion-button ion-icon {
+  margen derecho: 0;
+  margen izquierdo: 10px;
+}
+
+html[dir="rtl"] .lista de botones de acción > li .btn .icono,
+html[dir="rtl"] .action-button-list > li .btn ion-icon,
+body.rtl-mode .action-button-list > li .btn .icon,
+body.rtl-mode .action-button-list > li .btn ion-icon {
+  margen derecho: -5px;
+  margen izquierdo: 10px;
+}
+
+html[dir="rtl"] .alert.alert-desechable,
+body.rtl-mode .alert.alert-desechable {
+  relleno derecho: 14px;
+  relleno-izquierda: 56px;
+}
+
+html[dir="rtl"] .alert .btn-cerrar,
+cuerpo.rtl-modo .alerta .btn-cerrar {
+  izquierda: 0;
+  derecha: automático;
+}
+
+html[dir="rtl"] .alerta .img-envoltura,
+html[dir="rtl"] .alerta .icon-wrap,
+cuerpo.rtl-mode .alert .img-wrap,
+cuerpo.rtl-mode .alert .icon-wrap {
+  margen derecho: 0;
+  margen izquierdo: 10px;
+}
+
+html[dir="rtl"] .btn-group .btn:último hijo,
+body.rtl-mode .btn-group .btn:last-child {
+  border-radius: 10px 0 0 10px !importante;
+}
+
+html[dir="rtl"] .btn-entrada de grupo[tipo="radio"]:primer hijo + .btn,
+html[dir="rtl"] .btn-group input[type="checkbox"]:primer hijo + .btn,
+body.rtl-mode .btn-group input[type="radio"]:first-child + .btn,
+body.rtl-mode .btn-group input[type="checkbox"]:first-child + .btn {
+  borde-radio: 0 10px 10px 0;
+}
+
+html[dir="rtl"] .carrusel-single .splide__slide,
+html[dir="rtl"] .carrusel-múltiple .splide__slide,
+cuerpo.modo rtl .carrusel-single .splide__slide,
+cuerpo.rtl-modo .carrusel-múltiple .splide__slide {
+  margen derecho: 0 !importante;
+  margen izquierdo: 0 !importante;
+  padding-right: 0 !importante;
+  relleno-izquierda: 16px !importante;
+}
+
+html[dir="rtl"] .carrusel-pequeño .splide__slide,
+cuerpo.modo rtl .carrusel-pequeño .splide__slide {
+  margen derecho: 8px !importante;
+  margen izquierdo: 0 !importante;
+  padding-right: 0 !importante;
+  padding-left: 0 !importante;
+}
+
+html[dir="rtl"] .form-check .form-check-label,
+body.rtl-mode .form-check .form-check-label {
+  relleno: 0 32px 0 0;
+}
+
+html[dir="rtl"] .form-check .form-check-label:después, html[dir="rtl"] .form-check .form-check-label:antes,
+body.rtl-mode .form-check .form-check-label:después,
+body.rtl-mode .form-check .form-check-label:before {
+  izquierda: automático;
+  derecha: 0;
+}
+
+html[dir="rtl"] .input-list .form-check:después,
+body.rtl-mode .input-list .form-check:después de {
+  margen izquierdo: automático;
+  margen derecho: 54px;
+}
+
+html[dir="rtl"] .input-list .form-check .form-check-label,
+body.rtl-mode .input-list .form-check .form-check-label {
+  relleno: 6px 54px 6px 16px;
+}
+
+html[dir="rtl"] .input-list .form-check .form-check-label:después, html[dir="rtl"] .input-list .form-check .form-check-label:antes,
+body.rtl-mode .input-list .form-check .form-check-label:después,
+body.rtl-mode .input-list .form-check .form-check-label:before {
+  derecha: 16px;
+  izquierda: automático;
+}
+
+html[dir="rtl"] .chip.chip-media,
+cuerpo.rtl-modo .chip.chip-media {
+  relleno-izquierda: 0;
+  relleno derecho: 20px;
+}
+
+html[dir="rtl"] .chip .chip-icono,
+html[dir="rtl"] .chip img,
+cuerpo.rtl-modo .chip .chip-icono,
+cuerpo.rtl-mode .chip img {
+  izquierda: automático;
+  derecha: 0;
+}
+
+html[dir="rtl"] .chip .chip-eliminar,
+cuerpo.rtl-mode .chip .chip-delete {
+  margen izquierdo: 0;
+  margen derecho: -10px;
+}
+
+html[dir="rtl"] .dialogbox .modal-dialog .modal-content .btn-inline .btn,
+cuerpo.rtl-mode .dialogbox .modal-dialog .modal-content .btn-inline .btn {
+  border-radius: 0 !importante;
+  margen izquierdo: 0;
+  margen derecho: 1px;
+}
+
+html[dir="rtl"] .dialogbox .modal-dialog .modal-content .btn-inline .btn:último hijo,
+body.rtl-mode .dialogbox .modal-dialog .modal-content .btn-inline .btn:last-child {
+  margen derecho: 1px;
+}
+
+html[dir="rtl"] .dialogbox .modal-dialog .modal-content .btn-inline .btn:first-child,
+body.rtl-mode .dialogbox .modal-dialog .modal-content .btn-inline .btn:first-child {
+  margen derecho: 0;
+}
+
+html[dir="rtl"] .btn i.icon,
+html[dir="rtl"] .btn icono de iones,
+cuerpo.rtl-mode .btn i.icon,
+body.rtl-mode .btn icono de iones {
+  margen derecho: 0;
+  margen izquierdo: 7px;
+}
+
+html[dir="rtl"] .btn .spinner-border,
+html[dir="rtl"] .btn .spinner-crecer,
+cuerpo.rtl-modo .btn .spinner-borde,
+cuerpo.modo rtl .btn .spinner-crecer {
+  margen derecho: 5px;
+  margen izquierdo: 5px;
+}
+
+html[dir="rtl"] .dropdown-toggle:después,
+body.rtl-mode .dropdown-toggle:después de {
+  margen izquierdo: 0;
+  margen derecho: 7px;
+}
+
+html[dir="rtl"] .desplegable .menú desplegable .icono,
+html[dir="rtl"] .dropdown .dropdown-menu ion-icon,
+html[dir="rtl"] .dropup .dropdown-menu .icon,
+html[dir="rtl"] .dropup .dropdown-menu ion-icon,
+body.rtl-mode .dropdown .dropdown-menu .icon,
+body.rtl-mode .dropdown .dropdown-menu ion-icon,
+body.rtl-mode .dropup .dropdown-menu .icon,
+body.rtl-mode .dropup .dropdown-menu ion-icon {
+  margen derecho: 0;
+  margen izquierdo: 6px;
+}
+
+html[dir="rtl"] .form-group .etiqueta,
+cuerpo.rtl-mode .form-group .label {
+  alineación de texto: heredar;
+}
+
+html[dir="rtl"] .grupo de formularios .control de formularios,
+cuerpo.rtl-mode .form-group .form-control {
+  relleno derecho: 0;
+  relleno-izquierda: 40px;
+}
+
+html[dir="rtl"] .form-group select.form-control,
+body.rtl-mode .form-group select.form-control {
+  relleno-izquierda: 0;
+}
+
+html[dir="rtl"] .form-group .clear-input,
+body.rtl-mode .form-group .clear-input {
+  izquierda: -10px;
+}
+
+html[dir="rtl"] .form-group.boxed .clear-input,
+body.rtl-mode .form-group.boxed .clear-input {
+  izquierda: 0;
+  derecha: automático;
+}
+
+html[dir="rtl"] .form-group.boxed .form-control,
+body.rtl-mode .form-group.boxed .form-control {
+  relleno derecho: 16px;
+}
+
+html[dir="rtl"] .form-group.basic .clear-input,
+body.rtl-mode .form-group.basic .clear-input {
+  izquierda: -10px;
+  derecha: automático;
+}
+
+html[dir="rtl"] .mensaje-elemento,
+body.rtl-mode .mensaje-elemento {
+  dirección: litros;
+}
+
+html[dir="rtl"] .notification-dialog.android-style .notification-header .imaged,
+body.rtl-mode .notification-dialog.android-style .notification-header .imaged {
+  margen derecho: 0;
+  margen izquierdo: 8px;
+}
+
+html[dir="rtl"] .notification-dialog.android-style .notification-header span,
+body.rtl-mode .notification-dialog.android-style .notification-header span {
+  margen izquierdo: 0;
+  margen derecho: 6px;
+}
+
+html[dir="rtl"] .notification-dialog.android-style .notification-header span:antes,
+body.rtl-mode .notification-dialog.android-style .notification-header span:before {
+  margen derecho: 0;
+  margen izquierdo: 6px;
+}
+
+html[dir="rtl"] .notification-dialog.android-style .notification-content .in,
+body.rtl-mode .notification-dialog.android-style .notification-content .in {
+  relleno derecho: 0;
+  relleno-izquierda: 16px;
+}
+
+html[dir="rtl"] .notification-dialog.android-style .notification-footer .notification-button,
+body.rtl-mode .notification-dialog.android-style .notification-footer .notification-button {
+  borde izquierdo: 1px sólido #DCDCE9;
+}
+
+html[dir="rtl"] .notification-dialog.android-style .notification-footer .notification-button:last-child,
+body.rtl-mode .notification-dialog.android-style .notification-footer .notification-button:last-child {
+  borde izquierdo: 0;
+}
+
+html[dir="rtl"] .notification-dialog.android-style .notification-footer .notification-button .icon,
+html[dir="rtl"] .notification-dialog.android-style .notification-footer .notification-button ion-icon,
+body.rtl-mode .notification-dialog.android-style .notification-footer .notification-button .icon,
+body.rtl-mode .notification-dialog.android-style .notification-footer .notification-button ion-icon {
+  margen derecho: 0;
+  margen izquierdo: 8px;
+}
+
+html[dir="rtl"] .notification-dialog.ios-style .notification-header .imaged,
+body.rtl-mode .notification-dialog.ios-style .notification-header .imaged {
+  margen derecho: 0;
+  margen izquierdo: 8px;
+}
+
+html[dir="rtl"] .notification-dialog.ios-style .notification-header span,
+body.rtl-mode .notification-dialog.ios-style .notification-header span {
+  margen izquierdo: 6px;
+  margen derecho: 0;
+}
+
+html[dir="rtl"] .notification-dialog.ios-style .notification-content .in,
+body.rtl-mode .notification-dialog.ios-style .notification-content .in {
+  relleno derecho: 0;
+  relleno-izquierda: 16px;
+}
+
+html[dir="rtl"] .notification-dialog.ios-style .notification-footer .notification-button,
+body.rtl-mode .notification-dialog.ios-style .notification-footer .notification-button {
+  borde izquierdo: 1px sólido rgba (255, 255, 255, 0.1);
+}
+
+html[dir="rtl"] .notification-dialog.ios-style .notification-footer .notification-button:last-child,
+body.rtl-mode .notification-dialog.ios-style .notification-footer .notification-button:last-child {
+  borde izquierdo: 0;
+}
+
+html[dir="rtl"] .notification-dialog.ios-style .notification-footer .notification-button .icon,
+html[dir="rtl"] .notification-dialog.ios-style .notification-footer .notification-button ion-icon,
+body.rtl-mode .notification-dialog.ios-style .notification-footer .notification-button .icon,
+body.rtl-mode .notification-dialog.ios-style .notification-footer .notification-button ion-icon {
+  margen derecho: 0;
+  margen izquierdo: 8px;
+}
+
+html[dir="rtl"] .caja de búsqueda .icono de entrada,
+body.rtl-mode .searchbox .input-icon {
+  izquierda: automático;
+  derecha: 0;
+}
+
+html[dir="rtl"] .caja de búsqueda .control de formulario,
+cuerpo.rtl-mode .searchbox .form-control {
+  relleno: 0 36px 0 16px;
+}
+
+html[dir="rtl"] .nav-tabs.capsulado,
+html[dir="rtl"] .nav-tabs.forrado,
+body.rtl-mode .nav-tabs.capsulado,
+body.rtl-mode .nav-tabs.lined {
+  relleno: 0;
+  margen: 0;
+}
+
+html[dir="rtl"] .línea de tiempo:antes,
+body.rtl-mode .timeline:before {
+  izquierda: automático;
+  derecha: 0;
+}
+
+html[dir="rtl"] .línea de tiempo .contenido,
+cuerpo.rtl-mode .timeline .content {
+  relleno-izquierda: 0;
+  relleno derecho: 20px;
+}
+
+html[dir="rtl"] .línea de tiempo .punto,
+cuerpo.rtl-mode .timeline .dot {
+  izquierda: automático;
+  derecha: -5px;
+}
+
+html[dir="rtl"] .timeline.timed,
+cuerpo.rtl-mode .timeline.timed {
+  relleno-izquierda: 0;
+  relleno derecho: 80px;
+}
+
+html[dir="rtl"] .timeline.timed:antes,
+body.rtl-mode .timeline.timed:before {
+  derecha: 80px;
+}
+
+html[dir="rtl"] .timeline.timed .time,
+cuerpo.rtl-mode .timeline.timed .time {
+  izquierda: automático;
+  derecha: -80px;
+  alineación de texto: izquierda;
+  relleno derecho: 4px;
+}
+
+html[dir="rtl"] .toast-box .en,
+body.rtl-mode .toast-box .en {
+  relleno derecho: 0;
+  relleno-izquierda: 20px;
+}
+
+html[dir="rtl"] .toast-box .in .icon,
+html[dir="rtl"] .toast-box .en icono de iones,
+body.rtl-mode .toast-box .in .icon,
+body.rtl-mode .toast-box .in ion-icon {
+  margen derecho: 0;
+  margen izquierdo: 8px;
+}
+
+html[dir="rtl"] .toast-box.toast-center .en,
+body.rtl-mode .toast-box.toast-center .in {
+  relleno-izquierda: 0;
+}
+
+html[dir="rtl"] .form-switch .form-check-label:antes,
+body.rtl-mode .form-switch .form-check-label:before {
+  izquierda: 4px;
+  arriba: 5px;
+  derecha: automático;
+}
+
+html[dir="rtl"] .sección-título .título,
+cuerpo.rtl-mode .section-heading .title {
+  relleno derecho: 0;
+  relleno-izquierda: 16px;
+}
+
+html[dir="rtl"] .transacciones .elemento .detalle .imagen-bloque,
+body.rtl-mode .transactions .item .detail .image-block {
+  margen derecho: 0;
+  margen izquierdo: 16px;
+}
+
+html[dir="rtl"] .transacciones .elemento .derecho,
+body.rtl-mode .transactions .item .right {
+  relleno-izquierda: 0;
+  relleno derecho: 10px;
+}
+
+html[dir="rtl"] .tarjeta-bloque,
+cuerpo.rtl-mode .card-block {
+  dirección: litros;
+}
+
+html[dir="rtl"] .card-block .menú desplegable,
+cuerpo.rtl-mode .card-block .dropdown-menu {
+  dirección: rtl;
+}
+
+html[dir="rtl"] .profileBox .image-wrapper,
+body.rtl-mode .profileBox .image-wrapper {
+  margen derecho: 0;
+  margen izquierdo: 16px;
+}
+
+html[dir="rtl"] .profileBox .en,
+body.rtl-mode .profileBox .in {
+  relleno derecho: 0;
+  relleno-izquierda: 25px;
+}
+
+html[dir="rtl"] .sidebar-cerrar,
+body.rtl-mode .sidebar-cerrar {
+  izquierda: 10px;
+  derecha: automático;
+}
+
+html[dir="rtl"] .panelbox-left .link-listview > li a,
+html[dir="rtl"] .panelbox-right .link-listview > li a,
+body.rtl-mode .panelbox-left .link-listview > li a,
+body.rtl-mode .panelbox-right .link-listview > li a {
+  relleno: 10px 16px 10px 36px;
+}
+
+html[dir="rtl"] .panelbox-left .image-listview > li a.item,
+html[dir="rtl"] .panelbox-right .image-listview > li a.item,
+body.rtl-mode .panelbox-left .image-listview > li a.item,
+body.rtl-mode .panelbox-right .image-listview > li a.item {
+  relleno derecho: 16px;
+  relleno-izquierda: 36px;
+}
+
+html[dir="rtl"] .desde-a-bloque,
+body.rtl-mode .from-to-block {
+  dirección: litros;
+}
+
+html[dir="rtl"] .text-fin,
+cuerpo.rtl-mode .text-end {
+  alineación de texto: izquierda! importante;
+}
+
+html[dir="rtl"] .texto-inicio,
+cuerpo.rtl-mode .text-start {
+  alineación de texto: derecha! importante;
+}
+
+html[dir="rtl"] .coinbox .botón fijo,
+body.rtl-mode .coinbox .fixed-button {
+  derecha: automático;
+  izquierda: 5px;
+}
+
+html[dir="rtl"] .lista-detallada > li a,
+cuerpo.modo-rtl .lista-detallada > li a {
+  relleno-izquierda: 16px;
+}
+
+html[dir="rtl"] .exchange-group .form-select,
+body.rtl-mode .exchange-group .form-select {
+  dirección: litros;
+  alineación de texto: derecha;
+  posición de fondo: centro izquierda;
+  relleno derecho: 0;
+  relleno-izquierda: 24px;
+}
+
+cuerpo.modo-oscuro {
+  fondo: #352f42;
+  color: #8f82a5;
+}
+
+cuerpo.modo-oscuro.bg-blanco {
+  fondo: #161129 !importante;
+}
+
+cuerpo.modo oscuro h1,
+cuerpo.modo oscuro h2,
+cuerpo.modo oscuro h3,
+cuerpo.modo oscuro h4,
+cuerpo.modo oscuro h5,
+cuerpo.modo oscuro h6 {
+  color: #fff;
+}
+
+body.dark-mode h1 pequeño,
+body.dark-mode h2 pequeño,
+body.dark-mode h3 pequeño,
+body.dark-mode h4 pequeño,
+body.dark-mode h5 pequeño,
+cuerpo.modo oscuro h6 pequeño {
+  color: rgba (255, 255, 255, 0,6);
+}
+
+cuerpo.modo oscuro .texto-silenciado {
+  color: #8f82a5 !importante;
+}
+
+cuerpo.modo oscuro .lead {
+  color: #8f82a5;
+}
+
+cuerpo.modo oscuro blockquote.blockquote {
+  fondo: rgba(45, 31, 59, 0.5);
+  color: #fff;
+}
+
+cuerpo.modo oscuro blockquote.blockquote .blockquote-footer {
+  color: #8f82a5;
+}
+
+cuerpo.modo oscuro .appHeader {
+  fondo: #161129;
+  color: #fff;
+  borde-fondo-color: #2d1f3b;
+}
+
+cuerpo.modo oscuro .appHeader:antes {
+  fondo: #161129;
+}
+
+cuerpo.modo oscuro .appHeader.bg-luz {
+  color: #161129;
+}
+
+cuerpo.modo oscuro .appHeader.transparent {
+  fondo: transparente;
+}
+
+body.dark-mode .appHeader.transparent:before {
+  fondo: #030108;
+}
+
+cuerpo.modo-oscuro .extraHeader {
+  fondo: #161129;
+  borde-fondo-color: #2d1f3b;
+}
+
+cuerpo.modo oscuro .content-hero {
+  fondo: #161129;
+  borde-fondo-color: #2d1f3b;
+}
+
+cuerpo.modo oscuro .bloque ancho {
+  fondo: #161129;
+  borde-superior-color: #2d1f3b;
+  borde-fondo-color: #2d1f3b;
+}
+
+cuerpo.modo-oscuro .sección-título {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .content-header,
+cuerpo.modo oscuro .content-footer {
+  color: #69587f;
+}
+
+cuerpo.modo oscuro .appBottomMenu {
+  fondo: #352f42;
+  borde-superior-color: #352f42;
+}
+
+cuerpo.modo oscuro .appBottomMenu .item .icon,
+body.dark-mode .appBottomMenu .item ion-icon,
+cuerpo.modo oscuro .appBottomMenu .item fuerte {
+  color: #fff;
+}
+
+body.dark-mode .appBottomMenu .item:hover .icon,
+body.dark-mode .appBottomMenu .item:hover ion-icon,
+body.dark-mode .appBottomMenu .item:hover strong {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .appBottomMenu.bg-luz {
+  fondo: #fff !importante;
+}
+
+cuerpo.dark-mode .appBottomMenu.bg-light .item .icon,
+body.dark-mode .appBottomMenu.bg-light .item ion-icon,
+body.dark-mode .appBottomMenu.bg-light .item fuerte {
+  color: #27173E;
+}
+
+cuerpo.modo oscuro .appFooter {
+  borde-superior-color: #352f42;
+  fondo: #352f42 !importante;
+}
+
+cuerpo.modo oscuro .appFooter .footer-title {
+  color: #fff;
+}
+
+cuerpo.dark-mode .section-heading .link {
+  color: rgba(149, 141, 158, 0.8) !importante;
+}
+
+cuerpo.modo-oscuro #sidebarPanel .modal-dialog {
+  fondo: #161129;
+}
+
+cuerpo.modo-oscuro #sidebarPanel .modal-dialog .modal-content {
+  fondo: transparente !importante;
+}
+
+body.dark-mode #sidebarPanel .modal-dialog .sidebar-close {
+  color: #69587f !importante;
+}
+
+body.dark-mode .sidebar-balance .listview-title {
+  color: #fff;
+}
+
+body.dark-mode .profileBox .in fuerte {
+  color: #fff;
+}
+
+body.dark-mode .profileBox .in .text-muted {
+  color: #69587f !importante;
+}
+
+cuerpo.modo oscuro .listview-título {
+  color: #8f82a5;
+}
+
+cuerpo.modo oscuro .listview {
+  color: #fff;
+  fondo: #161129;
+  borde-superior-color: #2d1f3b;
+  borde-fondo-color: #2d1f3b;
+}
+
+cuerpo.modo oscuro .listview .texto silenciado {
+  color: #69587f !importante;
+}
+
+cuerpo.modo oscuro .listview .texto-pequeño {
+  color: #8f82a5;
+}
+
+cuerpo.modo oscuro .listview .text-xsmall {
+  color: #69587f;
+}
+
+body.dark-mode .listview > li:después {
+  fondo: #2d1f3b;
+}
+
+body.dark-mode .listview > li pie de página {
+  color: #8f82a5;
+}
+
+body.dark-mode .listview > li.divider-title {
+  fondo: rgba(45, 31, 59, 0.5);
+  borde-superior-color: #2d1f3b;
+  borde-fondo-color: #2d1f3b;
+  color: #8f82a5;
+}
+
+body.dark-mode .link-listview > li a {
+  color: #fff !importante;
+}
+
+body.dark-mode .link-listview > li a:después {
+  color: #69587f;
+}
+
+body.dark-mode .link-listview > li a:active {
+  fondo: rgba(45, 31, 59, 0.3);
+}
+
+body.dark-mode .link-listview > li.active a {
+  fondo: rgba(45, 31, 59, 0.3) !importante;
+}
+
+body.dark-mode .image-listview > li a.item {
+  color: #fff !importante;
+}
+
+body.dark-mode .image-listview > li a.item:active {
+  fondo: rgba(45, 31, 59, 0.3);
+}
+
+body.dark-mode .image-listview > li a.item:después {
+  color: #69587f;
+}
+
+body.dark-mode .image-listview > li.active .item {
+  fondo: rgba(45, 31, 59, 0.3) !importante;
+}
+
+body.dark-mode .image-listview.media > li {
+  borde-fondo-color: #2d1f3b;
+}
+
+cuerpo.modo oscuro .acordeón {
+  borde-superior-color: #2d1f3b;
+  borde-fondo-color: #2d1f3b;
+  fondo: #161129;
+}
+
+cuerpo.modo-oscuro .acordeón .cuerpo-acordeón {
+  fondo: #161129;
+}
+
+cuerpo.modo oscuro .acordeón .acordeón-cabecera .btn,
+cuerpo.modo oscuro .acordeón .acordeón-cabecera .acordeón-botón {
+  fondo: #161129 !importante;
+  color: #fff;
+}
+
+bo dy.dark-mode .accordion .accordion-header .btn:activo,
+body.dark-mode .accordion .accordion-header .accordion-button:active {
+  fondo: #161129 !importante;
+}
+
+body.dark-mode .accordion .accordion-header .btn:después,
+body.dark-mode .accordion .accordion-header .accordion-button:después {
+  fondo: url("data:image/svg+xml,%0A%3Csvg width='10px' height='16px' viewBox='0 0 10 16' version='1.1' xmlns='http://www.w3 .org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Página-1' trazo='ninguno' ancho de trazo='1' relleno ='ninguna' regla de relleno='evenodd' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg id='Listview' transform='translate(-112.000000, -120.000000)' stroke='% 23FFF' ancho de trazo='2.178'%3E%3Cpolilínea id='Ruta' puntos='114 122 120 128 114 134'%3E%3C/polilínea%3E%3C/g%3E%3C/g%3E%3C /svg%3E") centro sin repetición centro !importante;
+  color: #69587f;
+}
+
+body.dark-mode .accordion .accordion-header .btn.collapsed:antes,
+body.dark-mode .accordion .accordion-header .accordion-button.collapsed:before {
+  fondo: #2d1f3b;
+}
+
+body.dark-mode .accordion .accordion-header.bg-primary .accordion-button {
+  fondo: #6236FF !importante;
+}
+
+body.dark-mode .accordion .accordion-header.bg-secundario .accordion-button {
+  fondo: #8494A8 !importante;
+}
+
+body.dark-mode .accordion .accordion-header.bg-success .accordion-button {
+  fondo: #1DCC70 !importante;
+}
+
+body.dark-mode .accordion .accordion-header.bg-warning .accordion-button {
+  fondo: #FFB400 !importante;
+}
+
+body.dark-mode .accordion .accordion-header.bg-danger .accordion-button {
+  fondo: #FF396F !importante;
+}
+
+body.dark-mode .accordion .accordion-header.bg-info .accordion-button {
+  fondo: #05D0A4 !importante;
+}
+
+body.dark-mode .accordion .accordion-header.bg-dark .accordion-button {
+  fondo: #222 !importante;
+}
+
+cuerpo.modo oscuro .recuadro .acordeón {
+  color del borde: #2d1f3b;
+}
+
+cuerpo.modo oscuro .modal .modal-contenido {
+  fondo: #161129;
+}
+
+cuerpo.dark-mode .modalbox .modal-dialog .modal-content .modal-header {
+  borde-fondo-color: #2d1f3b;
+  fondo: #161129;
+}
+
+cuerpo.dark-mode .modalbox .modal-dialog .modal-content .modal-header .modal-title {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .panelbox .modal-dialog .modal-content .modal-header .modal-title {
+  color: #fff;
+}
+
+body.dark-mode .modal.action-sheet .modal-content .modal-header {
+  borde-fondo-color: #2d1f3b;
+}
+
+body.dark-mode .modal.action-sheet .modal-content .modal-header .modal-title {
+  color: #fff;
+}
+
+body.dark-mode .action-button-list > li .btn {
+  color: #fff;
+}
+
+body.dark-mode .action-button-list > li .btn:active, body.dark-mode .action-button-list > li .btn.active {
+  fondo: rgba(45, 31, 59, 0.3);
+}
+
+body.dark-mode .action-button-list > li .btn.text-dark {
+  color: #fff !importante;
+}
+
+body.dark-mode .action-button-list > li.action-divider {
+  fondo: #2d1f3b;
+}
+
+cuerpo.modo-oscuro .tarjeta {
+  fondo: #161129;
+}
+
+cuerpo.modo oscuro .tarjeta .tarjeta-subtítulo,
+cuerpo.modo-oscuro .tarjeta .título-de-tarjeta {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .tarjeta .listview {
+  borde-radio: 10px;
+}
+
+cuerpo.modo oscuro .card .card-header {
+  color: #fff;
+  borde-fondo-color: #2d1f3b;
+}
+
+cuerpo.modo oscuro .card .card-footer {
+  borde-superior-color: #2d1f3b;
+  color: #8f82a5;
+}
+
+cuerpo.modo oscuro .tarjeta.bg-primario .encabezado de tarjeta, cuerpo.modo oscuro .tarjeta.bg-secundario .encabezado de tarjeta, cuerpo.modo oscuro .tarjeta.bg-peligro .encabezado de tarjeta, cuerpo. modo oscuro .card.bg-success .card-header, body.dark-mode .card.bg-warning .card-header, body.dark-mode .card.bg-info .card-header, body.dark- modo .card.bg-dark .card-header {
+  borde inferior: 1px sólido rgba (255, 255, 255, 0.15);
+}
+
+cuerpo.modo oscuro .tarjeta.bg-luz {
+  fondo: #fff !importante;
+  color: #958d9e;
+}
+
+cuerpo.modo oscuro .card.bg-light .card-header {
+  borde-fondo-color: #DCDCE9;
+  color: #27173E;
+}
+
+cuerpo.modo oscuro .card.bg-light .card-title {
+  color: #27173E;
+}
+
+cuerpo.dark-mode .form-check .form-check-label {
+  color: #fff;
+}
+
+cuerpo.dark-mode .form-check .form-check-label:después de {
+  color del borde: #3f2b52;
+}
+
+body.dark-mode .input-list .form-check:after {
+  fondo: #2d1f3b;
+}
+
+body.dark-mode .input-list .form-check .form-check-label:active {
+  fondo: rgba(45, 31, 59, 0.3);
+}
+
+body.dark-mode .form-switch .form-check-label:después de {
+  fondo: #2d1f3b;
+}
+
+body.dark-mode .form-switch .form-check-label:before {
+  fondo: #ffffff;
+}
+
+body.dark-mode .form-switch .form-check-input:checked ~ .form-check-label:after {
+  fondo: #6236FF !importante;
+}
+
+cuerpo.modo oscuro .chip {
+  fondo: #372648;
+  color: #fff;
+}
+
+cuerpo.modo oscuro .chip.chip-contorno {
+  box-shadow: recuadro 0 0 0 1px #372648;
+}
+
+cuerpo.modo oscuro .chip .chip-icono {
+  fondo: #8f82a5;
+}
+
+cuerpo.modo oscuro .chip .chip-delete {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .dialogbox .modal-dialog .modal-content .btn-list .btn {
+  border-bottom-color: #2d1f3b !importante;
+}
+
+body.dark-mode .dialogbox .modal-dialog .modal-content .btn-list .btn:hover, body.dark-mode .dialogbox .modal-dialog .modal-content .btn-list .btn:focus, body. modo oscuro .dialogbox .modal-dialog .modal-content .btn-list .btn:active, body.dark-mode .dialogbox .modal-dialog .modal-content .btn-list .btn.active {
+  fondo: rgba(45, 31, 59, 0.3) !importante;
+}
+
+cuerpo.dark-mode .dialogbox .modal-dialog .modal-content .btn-inline {
+  fondo: #2d1f3b;
+}
+
+cuerpo.dark-mode .dialogbox .modal-dialog .modal-content .btn-inline .btn {
+  fondo: #161129;
+  color: #8f82a5;
+  border-right-color: #2d1f3b !importante;
+}
+
+body.dark-mode .dialogbox .modal-dialog .modal-content .btn-inline .btn:hover, body.dark-mode .dialogbox .modal-dialog .modal-content .btn-inline .btn:focus, body. modo oscuro .dialogbox .modal-dialog .modal-content .btn-inline .btn:active, body.dark-mode .dialogbox .modal-dialog .modal-content .btn-inline .btn.active {
+  fondo: rgba(22, 17, 41, 0.7) !importante;
+}
+
+cuerpo.modo oscuro .dialogbox .modal-dialog .modal-content .modal-header .modal-title {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .dialogbox .modal-dialog .modal-content .modal-footer {
+  borde-superior-color: #2d1f3b;
+}
+
+cuerpo.modo oscuro .desplegable .menú desplegable,
+cuerpo.modo oscuro .dropup .menú desplegable {
+  fondo: #161129;
+  color del borde: #2d1f3b;
+}
+
+cuerpo.dark-mode .dropdown .dropdown-menu .dropdown-item,
+cuerpo.modo oscuro .dropup .menú desplegable .elemento desplegable {
+  color: #fff;
+}
+
+body.dark-mode .dropdown .dropdown-menu .dropdown-item:hover, body.dark-mode .dropdown .dropdown-menu .dropdown-item:activo,
+body.dark-mode .dropup .dropdown-menu .dropdown-item:hover,
+body.dark-mode .dropup .dropdown-menu .dropdown-item:active {
+  fondo: rgba(45, 31, 59, 0.5);
+  color: #fff;
+}
+
+cuerpo.modo oscuro .desplegable .menú desplegable .elemento desplegable .divisor desplegable,
+cuerpo.modo oscuro .dropup .dropdown-menu .dropdown-item .dropdown-divider {
+  borde-superior-color: #2d1f3b;
+}
+
+cuerpo.dark-mode .dropdown .dropdown-menu .dropdown-header,
+cuerpo.dark-mode .dropup .dropdown-menu .dropdown-header {
+  color: #8f82a5;
+}
+
+cuerpo.modo oscuro .desplegable .menú desplegable .texto,
+cuerpo.modo oscuro .dropup .menú desplegable .texto {
+  color: #8f82a5;
+}
+
+cuerpo.modo oscuro .desplegable .menú desplegable .icono,
+body.dark-mode .dropdown .dropdown-menu ion-icon,
+cuerpo.modo oscuro .dropup .dropdown-menu .icon,
+body.dark-mode .dropup .dropdown-menu ion-icon {
+  color: #fff;
+}
+
+cuerpo.modo-oscuro .exampleBox {
+  color del borde: #2d1f3b;
+  fondo: rgba(45, 31, 59, 0.2);
+}
+
+cuerpo.modo oscuro .iconExample {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .form-group .label {
+  color: #fff;
+}
+
+cuerpo.dark-mode .form-group .input-info {
+  color: #69587f;
+}
+
+cuerpo.dark-mode .form-group .clear-input {
+  color: #8f82a5;
+}
+
+cuerpo.dark-mode .form-group.basic .form-control,
+body.dark-mode .form-group.basic .custom-select {
+  borde-fondo-color: #372648;
+  color: #fff;
+}
+
+body.dark-mode .verification-input {
+  border-color: #372648 !importante;
+  color: #fff !importante;
+  fondo: #161129 !importante;
+}
+
+body.dark-mode .verification-input:focus {
+  border-color: #6236FF !importante;
+}
+
+body.dark-mode .input-group .input-group-text {
+  borde-fondo-color: #372648;
+  color: #fff;
+}
+
+body.dark-mode .custom-file-upload label {
+  color de fondo: rgba(45, 31, 59, 0.2);
+  color del borde: #372648;
+  margen: 0;
+}
+
+body.dark-mode .custom-file-upload label span {
+  color: #69587f;
+}
+
+body.dark-mode .custom-file-upload label span .icon,
+body.dark-mode .custom-file-upload label span ion-icon {
+  color: #69587f;
+}
+
+body.dark-mode .custom-file-upload label.file-uploaded span {
+  color: #8f82a5;
+  color de fondo: #2d1f3b;
+}
+
+body.dark-mode .form-group.boxed .form-control {
+  color: #fff;
+  color del borde: #372648;
+  fondo: #141025;
+}
+
+body.dark-mode .form-group.boxed .form-control:focus {
+  color del borde: #6236FF;
+}
+
+cuerpo.modo oscuro .mensaje-divider {
+  color: #69587f;
+}
+
+cuerpo.modo oscuro .mensaje-elemento .burbuja {
+  fondo: #2d1f3b;
+  color: #fff;
+}
+
+cuerpo.modo oscuro .mensaje-elemento .título {
+  color: #8f82a5;
+}
+
+cuerpo.modo oscuro .mensaje-elemento .pie de página {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .chatFooter {
+  fondo: #030108;
+  borde-superior-color: #2d1f3b;
+}
+
+body.dark-mode .notification-dialog.android-style {
+  fondo: #18122d;
+}
+
+body.dark-mode .notification-dialog.android-style .notification-header .in strong {
+  color: #fff;
+}
+
+body.dark-mode .notification-dialog.android-style .notification-header .close-button {
+  color: #69587f;
+}
+
+body.dark-mode .notification-dialog.android-style .notification-header .close-button:hover, body.dark-mode .notification-dialog.android-style .notification-header .close-button:active {
+  color: #8f82a5;
+}
+
+body.dark-mode .notification-dialog.android-style .icon-box {
+  color: #69587f;
+}
+
+body.dark-mode .notification-dialog.android-style .notification-footer {
+  borde superior: 1px sólido #2d1f3b;
+}
+
+body.dark-mode .notification-dialog.android-style .notification-footer .notification-button {
+  borde derecho: 1px sólido #2d1f3b;
+}
+
+body.dark-mode .notification-dialog.android-style .notification-footer .notification-button:hover, body.dark-mode .notification-dialog.android-style .notification-footer .notification-button:active {
+  fondo: rgba(45, 31, 59, 0.3);
+}
+
+body.dark-mode .notification-dialog.ios-style {
+  fondo: #20183b;
+}
+
+body.dark-mode .notification-dialog.ios-style .icon-box {
+  color: #69587f;
+}
+
+cuerpo.modo oscuro .progreso {
+  fondo: #372648;
+}
+
+cuerpo.dark-mode .searchbox entrada {
+  color: #8f82a5;
+}
+
+cuerpo.dark-mode .searchbox .form-control {
+  fondo: #2d1f3b;
+  border-color: #2d1f3b !importante;
+}
+
+body.dark-mode .searchbox .form-control:focus {
+  color del borde: #070509;
+  color: #fff;
+}
+
+body.dark-mode .searchbox .form-control:focus ~ .input-icon {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .caja de búsqueda .cerrar {
+  color: #69587f;
+}
+
+body.dark-mode .searchbox .input-icon {
+  color: #69587f;
+}
+
+cuerpo.modo-oscuro .tabla {
+  color: #8f82a5;
+}
+
+cuerpo.modo-oscuro .table tr {
+  color del borde: #2d1f3b;
+}
+
+cuerpo.dark-mode .table thead th {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .table td,
+cuerpo.modo oscuro .table th {
+  borde superior: 1px sólido #2d1f3b;
+}
+
+body.dark-mode .table-striped > tbody > tr:nth-of-type(odd) {
+  fondo: rgba(45, 31, 59, 0.1);
+  color: #8f82a5;
+}
+
+body.dark-mode .table-bordered td,
+body.dark-mode .table-bordered th {
+  color del borde: #2d1f3b;
+}
+
+body.dark-mode .table.bg-primary tbody td,
+body.dark-mode .table.bg-primary tbody th,
+body.dark-mode .table.bg-secundario tbody td,
+body.dark-mode .table.bg-secundario tbody th,
+body.dark-mode .table.bg-success tbody td,
+body.dark-mode .table.bg-success tbody th,
+body.dark-mode .table.bg-peligro tbody td,
+body.dark-mode .table.bg-peligro tbody th,
+body.dark-mode .table.bg-warning tbody td,
+body.dark-mode .table.bg-warning tbody th,
+body.dark-mode .table.bg-info tbody td,
+body.dark-mode .table.bg-info tbody th {
+  borde-superior-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .table.bg-primary tr,
+cuerpo.modo oscuro .table.bg-primary td,
+body.dark-mode .table.bg-primary th,
+body.dark-mode .table.bg-secundario tr,
+body.dark-mode .table.bg-secundario td,
+body.dark-mode .table.bg-secundario th,
+body.dark-mode .table.bg-success tr,
+cuerpo.modo oscuro .table.bg-success td,
+body.dark-mode .table.bg-success th,
+cuerpo.modo oscuro .table.bg-peligro tr,
+cuerpo.modo oscuro .table.bg-peligro td,
+cuerpo.modo oscuro .table.bg-peligro th,
+cuerpo.modo oscuro .table.bg-advertencia tr,
+cuerpo.modo oscuro .table.bg-advertencia td,
+body.dark-mode .table.bg-warning th,
+cuerpo.modo oscuro .table.bg-info tr,
+cuerpo.modo oscuro .table.bg-info td,
+cuerpo.modo oscuro .table.bg-info th {
+  borde-fondo-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .table.bg-primary tbody tr:last-child td,
+body.dark-mode .table.bg-primary tbody tr:last-child th,
+body.dark-mode .table.bg-secundario tbody tr:last-child td,
+body.dark-mode .table.bg-secundario tbody tr:last-child th,
+body.dark-mode .table.bg-success tbody tr:last-child td,
+body.dark-mode .table.bg-success tbody tr:last-child th,
+body.dark-mode .table.bg-danger tbody tr:last-child td,
+body.dark-mode .table.bg-danger tbody tr:last-child th,
+body.dark-mode .table.bg-warning tbody tr:last-child td,
+body.dark-mode .table.bg-warning tbody tr:last-child th,
+body.dark-mode .table.bg-info tbody tr:last-child td,
+body.dark-mode .table.bg-info tbody tr:last-child th {
+  border-bottom-color: transparente !importante;
+}
+
+cuerpo.dark-mode .nav-tabs.capsulado {
+  fondo: rgba(45, 31, 59, 0.4);
+}
+
+cuerpo.modo oscuro .nav-tabs.capsuled .nav-item .nav-link {
+  color: #8f82a5;
+}
+
+cuerpo.dark-mode .nav-tabs.capsuled .nav-item .nav-link.active {
+  color: #fff;
+  fondo: #3a284c;
+  sombra de caja: 0 2px 4px 0 rgba(0, 0, 0, 0.22), 0 2px 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+cuerpo.modo oscuro .nav-tabs.lined .nav-item .nav-link {
+  color: #8f82a5;
+}
+
+cuerpo.modo oscuro .nav-tabs.lined .nav-item .nav-link.active {
+  color: #6236FF;
+}
+
+body.dark-mode .timeline:before {
+  fondo: #2d1f3b;
+}
+
+cuerpo.modo oscuro .línea de tiempo .punto {
+  fondo: #69587f;
+}
+
+cuerpo.modo-oscuro .billetera-tarjeta {
+  fondo: #161129;
+  índice z: 1;
+}
+
+cuerpo.modo oscuro .billetera-tarjeta .saldo .derecho .botón {
+  color: rgba (255, 255, 255, 0,7);
+  fondo: rgba(98, 54, 255, 0.15);
+}
+
+cuerpo.modo-oscuro .billetera-tarjeta .saldo .título {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .billetera-tarjeta .billetera-pie de página {
+  borde-superior-color: #2d1f3b;
+}
+
+body.dark-mode .wallet-card .wallet-footer .item strong {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .stat-box {
+  fondo: #161129;
+}
+
+cuerpo.modo oscuro .stat-box .title {
+  color: #8f82a5;
+}
+
+cuerpo.modo oscuro .stat-box .valor {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .transacciones .item {
+  fondo: #161129;
+}
+
+cuerpo.modo oscuro .transacciones .item p {
+  color: #8f82a5;
+}
+
+body.dark-mode .transactions .item .detail strong {
+  color: #fff;
+}
+
+body.dark-mode .transactions .item .right .price {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .bill-box {
+  fondo: #161129;
+}
+
+cuerpo.modo oscuro .bill-box .precio {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .objetivos .item {
+  fondo: #161129;
+}
+
+cuerpo.modo oscuro .objetivos .elemento .precio {
+  color: #fff;
+}
+
+cuerpo.modo-oscuro .tarjeta-usuario {
+  fondo: #161129;
+}
+
+body.dark-mode .user-card fuerte {
+  color: #fff;
+}
+
+cuerpo.modo-oscuro .blog-tarjeta {
+  fondo: #161129;
+}
+
+body.dark-mode .blog-card pequeño {
+  color: #69587f;
+}
+
+body.dark-mode .fixed-bar {
+  fondo: #161129;
+}
+
+body.dark-mode .transfer-verification .from-to-block .item strong {
+  color: #8f82a5;
+}
+
+body.dark-mode .transfer-verification .from-to-block .arrow {
+  fondo: #2d1f3b;
+}
+
+body.dark-mode .transfer-verification .from-to-block .arrow:after {
+  color del borde: #2d1f3b;
+}
+
+body.dark-mode .transfer-verification .transfer-amount .caption {
+  color: #fff;
+}
+
+body.dark-mode .ios-add-to-home .modal-content:before {
+  borde-superior-color: #161129;
+}
+
+body.dark-mode .ios-add-to-home .modal-content .action-sheet-content {
+  color: #fff;
+}
+
+body.dark-mode .android-add-to-home .modal-content:before {
+  borde-superior-color: #161129;
+}
+
+body.dark-mode .android-add-to-home .modal-content .action-sheet-content {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .coinbox h4 {
+  color: #69587f;
+}
+
+cuerpo.modo oscuro .coinbox .text {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .coinbox .botón fijo {
+  color: #69587f;
+}
+
+body.dark-mode .coinbox .fixed-button:hover {
+  color: #8f82a5;
+}
+
+cuerpo.modo oscuro .widget-card .widget-subtítulo {
+  color: #69587f;
+}
+
+cuerpo.modo oscuro .widget-card .card-header fuerte {
+  color: #69587f;
+}
+
+body.dark-mode .widget-card .stats strong {
+  color: #fff;
+}
+
+body.dark-mode .exchange-group .form-select {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .exchange-heading .group-label {
+  color: #fff;
+}
+
+cuerpo.modo oscuro .exchange-heading .exchange-wallet-info {
+  color: #69587f;
+}
+
+body.dark-mode .exchange-line:después de {
+  fondo: #20162a;
+}
+
+cuerpo.modo oscuro .icono de intercambio {
+  color: #fff;
+  fondo: #20162a;
+}
+
+body.dark-mode.rtl-mode .notification-dialog.android-style .notification-footer .notification-button {
+  borde derecho: 0;
+  borde-izquierdo-color: #2d1f3b;
+}
+    .alert{padding:20px;background-color:#f44336;color:#fff;margin-bottom:15px}.closebtn{margin-left:15px;color:#fff;font-weight:700;float:right;font -size:22px;line-height:20px;cursor:pointer;transition:.3s}.closebtn:hover{color:#000}.card-wrapper{posición:relativa}
